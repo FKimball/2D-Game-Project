@@ -1,12 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://by2tblwm13m8p"]
 
-[ext_resource type="Texture2D" uid="uid://c8u0mtfgqgp3y" path="res://icon.svg" id="1_sbiyr"]
 [ext_resource type="PackedScene" uid="uid://ch4n7mtooprol" path="res://frankie_scene.tscn" id="2_smtd2"]
+[ext_resource type="PackedScene" uid="uid://cwm0axnrvpu02" path="res://anton_scene.tscn" id="3_40m0e"]
 
 [node name="Icon" type="Sprite2D"]
 position = Vector2(537, 292)
 scale = Vector2(0.765625, 0.765625)
-texture = ExtResource("1_sbiyr")
 
 [node name="Node2D" parent="." instance=ExtResource("2_smtd2")]
 position = Vector2(-1061.88, 9.14286)
+
+[node name="Anton" parent="." instance=ExtResource("3_40m0e")]
+position = Vector2(-461.061, -207.673)

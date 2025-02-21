@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwm0axnrvpu02"]
+
+[ext_resource type="Texture2D" uid="uid://bltqdgvryb2hm" path="res://images/sun.png" id="1_pi3p6"]
+[ext_resource type="Texture2D" uid="uid://cu5rwwsts5d5k" path="res://images/cloud.png" id="2_h6oea"]
+
+[node name="Anton" type="Node2D"]
+
+[node name="Sun" type="Sprite2D" parent="."]
+position = Vector2(-1.00001, 3.00001)
+scale = Vector2(1.01803, 0.981061)
+texture = ExtResource("1_pi3p6")
+
+[node name="Cloud" type="Sprite2D" parent="."]
+position = Vector2(304, 158)
+scale = Vector2(1.16371, 1.13567)
+texture = ExtResource("2_h6oea")
+
+[node name="Cloud2" type="Sprite2D" parent="."]
+position = Vector2(781.25, -76.25)
+scale = Vector2(0.70331, 0.646006)
+texture = ExtResource("2_h6oea")
+
+[node name="Cloud3" type="Sprite2D" parent="."]
+position = Vector2(-344, -120)
+scale = Vector2(1.32979, 1.18044)
+texture = ExtResource("2_h6oea")
