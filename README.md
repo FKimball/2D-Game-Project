@@ -2,5 +2,5 @@
 2D Game Project 
 By: Saif, Frankie, Mila, and Anton
 
-LATEST:
+LATEST:\
 Lab #2: collaborate to create multiple scenes
