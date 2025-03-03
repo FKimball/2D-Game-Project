@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bv7w3gyut4iqi"]
+
+[ext_resource type="Texture2D" uid="uid://d24y472ue6f0b" path="res://icon.svg" id="1_471u3"]
+[ext_resource type="Script" path="res://hand.gd" id="1_j8bdt"]
+[ext_resource type="Script" path="res://coins.gd" id="2_aleti"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slih5"]
+size = Vector2(36, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tj3bh"]
+size = Vector2(101, 145)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(1, 0)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 12.0
+offset_right = 115.0
+offset_bottom = 35.0
+text = "Coins left: X/Y
+"
+
+[node name="Hand" type="ColorRect" parent="."]
+offset_left = 549.0
+offset_top = 40.0
+offset_right = 593.0
+offset_bottom = 113.0
+script = ExtResource("1_j8bdt")
+
+[node name="Coin" type="RigidBody2D" parent="."]
+position = Vector2(571, 114)
+script = ExtResource("2_aleti")
+
+[node name="Icon" type="Sprite2D" parent="Coin"]
+scale = Vector2(0.273438, 0.242188)
+texture = ExtResource("1_471u3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
+shape = SubResource("RectangleShape2D_slih5")
+
+[node name="Pouch" type="ColorRect" parent="."]
+offset_left = 530.0
+offset_top = 542.0
+offset_right = 627.0
+offset_bottom = 676.0
+
+[node name="Area2D" type="Area2D" parent="Pouch"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pouch/Area2D"]
+position = Vector2(49.5, 65.5)
+shape = SubResource("RectangleShape2D_tj3bh")
+
+[connection signal="body_entered" from="Pouch/Area2D" to="Coin" method="_on_area_2d_body_entered"]
