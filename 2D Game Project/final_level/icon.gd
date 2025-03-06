@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+var in_workbench = false
 
 func _physics_process(_delta: float) -> void:
 	# Add the gravity.
@@ -23,7 +24,14 @@ func _physics_process(_delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	
+
+func _process(_delta: float) -> void: 
+	if in_workbench == true:
+		if Input.is_action_just_pressed("ui_accept"):
+			get_tree().change_scene_to_file("res://coindropper.tscn")
 	
 func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	get_tree().change_scene_to_file("res://coindropper.tscn")
+	in_workbench = true
+
+func _on_area_2d_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	in_workbench = false # Replace with function body.

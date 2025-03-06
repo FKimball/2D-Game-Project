@@ -47,3 +47,4 @@ shape = SubResource("RectangleShape2D_rds8d")
 debug_color = Color(0.407579, 0.785746, 0.955869, 0.42)
 
 [connection signal="body_shape_entered" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_entered"]
+[connection signal="body_shape_exited" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_exited"]
