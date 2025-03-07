@@ -24,6 +24,9 @@ func _physics_process(_delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+func _ready() -> void:
+	pass
 
 func _process(_delta: float) -> void: 
 	if in_workbench == true:
@@ -34,4 +37,4 @@ func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_inde
 	in_workbench = true
 
 func _on_area_2d_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	in_workbench = false # Replace with function body.
+	in_workbench = false 

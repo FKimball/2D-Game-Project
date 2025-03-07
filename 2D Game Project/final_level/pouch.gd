@@ -1,5 +1,7 @@
 extends AnimatedSprite2D
 
+var full = false
+var go_back = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,9 +10,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if full == true:
+		position.x -= 2
+	if position.x <= -200:
+		play("become_empty")
+		full = false
+		go_back = true
+	if go_back == true:
+		position.x += 2
+	if position.x >= 576:
+		go_back = false
 
 
 func _on_coin_full_pouch() -> void:
-	play("become_full") # Replace with function body.
-	
+	full = true
