@@ -3,8 +3,11 @@ extends RigidBody2D
 @export var speed = 1.1
 signal speed_up
 signal no_speed_up
+signal full_pouch
+
 var replay_position_y = position.y
 var score = 0
+var pouch_score_reset = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,8 +26,12 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("DropCoin"):
 		speed = 0
 		freeze = false
-		
+		pouch_score_reset = 5
 	
+	if (pouch_score_reset == 5):
+		emit_signal("full_pouch")
+		pouch_score_reset = 0
+		
 
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
@@ -35,6 +42,7 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	speed = $"../Hand".speed
 	position.x  = $"../Hand".position.x
 	score += 1
+	pouch_score_reset += 1
 
 func _on_area_2d_nothing_body_entered(body: Node2D) -> void:
 	visible = false #CHANGE TO FALSE

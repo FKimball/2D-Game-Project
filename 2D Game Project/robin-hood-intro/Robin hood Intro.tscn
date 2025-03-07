@@ -1,11 +1,8 @@
-[gd_scene load_steps=22 format=4 uid="uid://bkfrej1s2a46g"]
+[gd_scene load_steps=19 format=4 uid="uid://bkfrej1s2a46g"]
 
 [ext_resource type="Texture2D" uid="uid://br4s0xdg0dkc3" path="res://Final/Idle and running.png" id="1_6xd1g"]
 [ext_resource type="Texture2D" uid="uid://wafaco7dedxa" path="res://fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/spring_.png" id="2_d8anv"]
 [ext_resource type="Script" path="res://animated_sprite_2d.gd" id="2_lotyu"]
-[ext_resource type="Texture2D" uid="uid://bg4ad4ncc1tfb" path="res://Super Mountain Dusk Files/Assets/version A/Layers/far-clouds.png" id="4_vxudj"]
-[ext_resource type="Texture2D" uid="uid://8b3qp2gjw5fo" path="res://Super Mountain Dusk Files/Assets/version A/Layers/far-mountains.png" id="5_3u4jp"]
-[ext_resource type="Texture2D" uid="uid://ctwjym18x8gdb" path="res://Super Mountain Dusk Files/Assets/version A/Layers/trees.png" id="6_xrq3n"]
 [ext_resource type="Script" path="res://character_body_2d_2.gd" id="8_y1b6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rynn5"]
@@ -414,94 +411,77 @@ tile_set = SubResource("TileSet_ec8ie")
 show_behind_parent = true
 position = Vector2(-29, -45)
 scale = Vector2(4.03125, 2.25833)
-texture = ExtResource("4_vxudj")
 
 [node name="Far-clouds2" type="Sprite2D" parent="Far-clouds"]
 show_behind_parent = true
 position = Vector2(289.24, 3.71133)
 scale = Vector2(3.53125, 1.19875)
-texture = ExtResource("4_vxudj")
 
 [node name="Far-clouds2" type="Sprite2D" parent="Far-clouds/Far-clouds2"]
 show_behind_parent = true
 position = Vector2(146.677, -0.516)
 scale = Vector2(1.30222, 1)
-texture = ExtResource("4_vxudj")
 
 [node name="Far-mountains" type="Sprite2D" parent="."]
 show_behind_parent = true
 position = Vector2(617, 18)
 scale = Vector2(2.89375, 0.966667)
-texture = ExtResource("5_3u4jp")
 
 [node name="Far-mountains2" type="Sprite2D" parent="Far-mountains"]
 show_behind_parent = true
 position = Vector2(-62.5486, -2.06897)
 scale = Vector2(2.89375, 0.966667)
-texture = ExtResource("5_3u4jp")
 
 [node name="Far-mountains2" type="Sprite2D" parent="Far-mountains/Far-mountains2"]
 show_behind_parent = true
 position = Vector2(209.133, 3.21046)
 scale = Vector2(3.26729, 1.21554)
-texture = ExtResource("5_3u4jp")
 
 [node name="Trees" type="Sprite2D" parent="."]
 show_behind_parent = true
 position = Vector2(54, -20)
-texture = ExtResource("6_xrq3n")
 
 [node name="Trees2" type="Sprite2D" parent="."]
 show_behind_parent = true
 position = Vector2(297, -31)
-texture = ExtResource("6_xrq3n")
 
 [node name="Trees" type="Sprite2D" parent="Trees2"]
 show_behind_parent = true
 position = Vector2(327, -1)
 scale = Vector2(1.73333, 1)
-texture = ExtResource("6_xrq3n")
 
 [node name="Trees" type="Sprite2D" parent="Trees2/Trees"]
 show_behind_parent = true
 position = Vector2(241.154, 6)
-texture = ExtResource("6_xrq3n")
 
 [node name="Trees3" type="Sprite2D" parent="Trees2/Trees/Trees"]
 show_behind_parent = true
 position = Vector2(244.038, -1)
-texture = ExtResource("6_xrq3n")
 
 [node name="Trees3" type="Sprite2D" parent="Trees2/Trees/Trees/Trees3"]
 show_behind_parent = true
 position = Vector2(242.308, 4)
-texture = ExtResource("6_xrq3n")
 
 [node name="Trees3" type="Sprite2D" parent="Trees2/Trees/Trees/Trees3/Trees3"]
 show_behind_parent = true
 position = Vector2(244.038, 0)
-texture = ExtResource("6_xrq3n")
 
 [node name="Trees3" type="Sprite2D" parent="Trees2/Trees/Trees/Trees3/Trees3/Trees3"]
 show_behind_parent = true
 position = Vector2(238.846, 3)
-texture = ExtResource("6_xrq3n")
 
 [node name="Trees3" type="Sprite2D" parent="Trees2/Trees/Trees/Trees3/Trees3/Trees3/Trees3"]
 show_behind_parent = true
 position = Vector2(239.423, 5)
-texture = ExtResource("6_xrq3n")
 
 [node name="Trees3" type="Sprite2D" parent="Trees2/Trees/Trees/Trees3/Trees3/Trees3/Trees3/Trees3"]
 show_behind_parent = true
 position = Vector2(241.154, -15)
-texture = ExtResource("6_xrq3n")
 
 [node name="Trees3" type="Sprite2D" parent="Trees2/Trees/Trees/Trees3/Trees3/Trees3/Trees3/Trees3/Trees3"]
 show_behind_parent = true
 position = Vector2(247.5, -4)
 scale = Vector2(1.02885, 1)
-texture = ExtResource("6_xrq3n")
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
 script = ExtResource("8_y1b6m")
