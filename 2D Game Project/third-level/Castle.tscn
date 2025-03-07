@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=4 uid="uid://vs2sphh323q0"]
+[gd_scene load_steps=25 format=4 uid="uid://vs2sphh323q0"]
 
 [ext_resource type="Texture2D" uid="uid://c4egx540hl1qx" path="res://Assets/Terrain/Terrain (16x16).png" id="1_2re5d"]
 [ext_resource type="Script" path="res://game_manager.gd" id="1_18pns"]
 [ext_resource type="Texture2D" uid="uid://c58kjdpslxjlu" path="res://Assets/Super Mountain Dusk Files/Assets/Version C/layers/sky.png" id="1_5142h"]
 [ext_resource type="Texture2D" uid="uid://c38xrrsl80jls" path="res://Assets/castle_tileset.png" id="1_u4qef"]
+[ext_resource type="AudioStream" uid="uid://bkqernybvkntq" path="res://Assets/coin-pickup-98269.mp3" id="2_1w5yg"]
 [ext_resource type="Texture2D" uid="uid://binb2wpfjlx5l" path="res://Assets/Outdoors_Tileset/midground_/autumn_.png" id="2_4vfig"]
 [ext_resource type="Texture2D" uid="uid://p3damftjidc3" path="res://Assets/Super Mountain Dusk Files/Assets/Version C/layers/far-mountains.png" id="2_d0tj2"]
 [ext_resource type="PackedScene" uid="uid://bktp6xtyg3a0q" path="res://Character.tscn" id="2_kaowm"]
@@ -1282,6 +1283,9 @@ unique_name_in_owner = true
 position = Vector2(160, 248.362)
 scale = Vector2(3.02764, 2.17975)
 script = ExtResource("1_18pns")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game Manager"]
+stream = ExtResource("2_1w5yg")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
