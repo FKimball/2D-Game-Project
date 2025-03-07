@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b6yujd36pamin"]
+[gd_scene load_steps=27 format=3 uid="uid://b6yujd36pamin"]
 
 [ext_resource type="Texture2D" uid="uid://dhpmqbh4fa85i" path="res://Assets/FreeKnight_v1/_Idle.png" id="1_8d6ps"]
 [ext_resource type="Script" path="res://knight.gd" id="2_6fmma"]
@@ -157,6 +157,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b1nw1"]
+height = 36.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nsdh"]
 height = 36.0
 
@@ -168,8 +171,13 @@ script = ExtResource("2_6fmma")
 texture_filter = 1
 position = Vector2(5, -22)
 sprite_frames = SubResource("SpriteFrames_s7ah0")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_b1nw1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_6nsdh")
