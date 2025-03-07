@@ -1,6 +1,6 @@
 extends AnimatedSprite2D
 
-
+@onready var game_manager = %"Game Manager"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -9,8 +9,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	play("Idle")
-func _on_area_2d_area_entered(area):
-	print("coin picked up")
-	queue_free()
+	play("spin")
 	
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		queue_free()
+		game_manager.add_point()
