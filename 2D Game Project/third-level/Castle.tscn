@@ -1340,6 +1340,10 @@ position = Vector2(1016, 44)
 scale = Vector2(0.65, 0.65)
 spawn_point = Vector2(983, 300)
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(1.53848, -7.62939e-06)
+scale = Vector2(1.53846, 1.53846)
+
 [node name="coin1" parent="." instance=ExtResource("3_y750j")]
 position = Vector2(569, 81)
 
@@ -1424,18 +1428,18 @@ position = Vector2(-1707, 398)
 point_a = Vector2(-1706, 398)
 point_b = Vector2(-1783, 398)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Kill 1" type="Area2D" parent="."]
 position = Vector2(-178, 473)
 script = ExtResource("11_yr3ut")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-15.5, -2)
+[node name="Kill1collision" type="CollisionShape2D" parent="Kill 1"]
+position = Vector2(-15, 51)
 shape = SubResource("RectangleShape2D_gr8gi")
 
-[node name="Area2D2" type="Area2D" parent="."]
+[node name="Kill 2" type="Area2D" parent="."]
 position = Vector2(-1221, 465)
 script = ExtResource("11_yr3ut")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(-10, 5.75)
+[node name="Kill2collision" type="CollisionShape2D" parent="Kill 2"]
+position = Vector2(-9, 57)
 shape = SubResource("RectangleShape2D_gr8gi")
