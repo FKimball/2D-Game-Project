@@ -1,17 +1,57 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv7w3gyut4iqi"]
+[gd_scene load_steps=13 format=3 uid="uid://bv7w3gyut4iqi"]
 
-[ext_resource type="Texture2D" uid="uid://d24y472ue6f0b" path="res://icon.svg" id="1_471u3"]
 [ext_resource type="Script" path="res://hand.gd" id="1_j8bdt"]
 [ext_resource type="Script" path="res://coins.gd" id="2_aleti"]
+[ext_resource type="Texture2D" uid="uid://dbi7te5ydan8i" path="res://Assets/coins.png" id="3_ad6ry"]
+[ext_resource type="Script" path="res://timer.gd" id="4_o1da5"]
+[ext_resource type="Texture2D" uid="uid://codkulxijnshv" path="res://Assets/Pouch.png" id="4_offin"]
+[ext_resource type="Script" path="res://pouch.gd" id="5_k2hqk"]
+[ext_resource type="Texture2D" uid="uid://bh26v7htpr0uv" path="res://Assets/PouchFull.png" id="5_wjcx5"]
+[ext_resource type="Texture2D" uid="uid://c1p1wop1ao60x" path="res://Assets/wood_bg.jpg" id="8_g1js7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnw3g"]
+size = Vector2(1166, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slih5"]
 size = Vector2(36, 31)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_u84j2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wjcx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_offin")
+}],
+"loop": false,
+"name": &"become_empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_offin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wjcx5")
+}],
+"loop": false,
+"name": &"become_full",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tj3bh"]
-size = Vector2(101, 145)
+size = Vector2(63.0283, 76.1225)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(1, 0)
+
+[node name="Area2D Nothing" type="Area2D" parent="."]
+position = Vector2(2, 646)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D Nothing"]
+position = Vector2(573, 31)
+shape = SubResource("RectangleShape2D_qnw3g")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 8.0
@@ -21,34 +61,71 @@ offset_bottom = 35.0
 text = "Coins left: X/Y
 "
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 35.0
+offset_right = 115.0
+offset_bottom = 58.0
+text = "Pouches left to make: X/5
+"
+
 [node name="Hand" type="ColorRect" parent="."]
-offset_left = 549.0
-offset_top = 40.0
-offset_right = 593.0
-offset_bottom = 113.0
+offset_left = 556.0
+offset_top = 67.0
+offset_right = 604.0
+offset_bottom = 107.0
 script = ExtResource("1_j8bdt")
 
 [node name="Coin" type="RigidBody2D" parent="."]
-position = Vector2(571, 114)
+position = Vector2(577, 114)
 script = ExtResource("2_aleti")
 
 [node name="Icon" type="Sprite2D" parent="Coin"]
-scale = Vector2(0.273438, 0.242188)
-texture = ExtResource("1_471u3")
+scale = Vector2(2, 1.772)
+texture = ExtResource("3_ad6ry")
+region_enabled = true
+region_rect = Rect2(-0.178406, 0.214779, 18.5805, 17.3913)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
 shape = SubResource("RectangleShape2D_slih5")
 
-[node name="Pouch" type="ColorRect" parent="."]
-offset_left = 530.0
-offset_top = 542.0
-offset_right = 627.0
-offset_bottom = 676.0
+[node name="Pouch" type="AnimatedSprite2D" parent="."]
+position = Vector2(582, 542)
+scale = Vector2(2.0641, 2.89935)
+sprite_frames = SubResource("SpriteFrames_u84j2")
+animation = &"become_full"
+script = ExtResource("5_k2hqk")
 
 [node name="Area2D" type="Area2D" parent="Pouch"]
+position = Vector2(-2.42236, 11.3818)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pouch/Area2D"]
-position = Vector2(49.5, 65.5)
+position = Vector2(-0.023407, -11.605)
 shape = SubResource("RectangleShape2D_tj3bh")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.2
+script = ExtResource("4_o1da5")
+
+[node name="WoodBg" type="Sprite2D" parent="."]
+z_index = -15
+position = Vector2(607.5, 330)
+scale = Vector2(2.41882, 1.87778)
+texture = ExtResource("8_g1js7")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 663.0
+offset_top = 504.0
+offset_right = 886.0
+offset_bottom = 568.0
+text = "POUCH FULL!
+MAKE A NEW ONE"
+
+[connection signal="body_entered" from="Area2D Nothing" to="Coin" method="_on_area_2d_nothing_body_entered"]
+[connection signal="full_pouch" from="Coin" to="Pouch" method="_on_coin_full_pouch"]
+[connection signal="no_speed_up" from="Coin" to="Timer" method="_on_coin_no_speed_up"]
+[connection signal="speed_up" from="Coin" to="Hand" method="_on_coin_speed_up"]
+[connection signal="speed_up" from="Coin" to="Timer" method="_on_coin_speed_up"]
 [connection signal="body_entered" from="Pouch/Area2D" to="Coin" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="Coin" method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="Coin" method="_on_button_pressed"]
