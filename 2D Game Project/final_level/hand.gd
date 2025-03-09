@@ -9,7 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	position.x += speed
-	if position.x >= 776:
+	if position.x >= 826:
 		speed = speed*-1
 	elif position.x <= 276:
 		speed = speed*-1

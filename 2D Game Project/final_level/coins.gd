@@ -11,6 +11,7 @@ var pouch_score_reset = 0
 var pouches_done = 0
 var button_visible = false
 var is_dropping = false
+var wait_outcome = true
 
 
 
@@ -19,8 +20,10 @@ func _ready() -> void:
 	visible = true # Replace with function body.
 	freeze = true
 	position.x  = $"../Hand".position.x - 32
-	$"../Button".visible = false
-
+	$"../MakePouch".visible = false
+	$"../WinButton".visible = false
+	$"../ResetButton".visible = false
+	
 var queue_teleport: Vector2 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void: #FUNCTION TO AVOID SNAP-BACK BUG. SOURCE: https://forum.godotengine.org/t/when-changing-the-position-of-my-object-it-teleports-back-to-where-it-was-before-for-no-reason/78354/7
 	if queue_teleport != Vector2.ZERO:
@@ -34,7 +37,7 @@ func _process(_delta: float) -> void:
 	$"../Label".text = "Coins Left: " + str(score) + "/50"
 	$"../Label2".text = "Pouches Made: " + str(pouches_done) + "/5"
 	position.x += speed
-	if position.x >= 744:
+	if position.x >= 794:
 		speed = speed*-1
 	elif position.x <= 244:
 		speed = speed*-1
@@ -47,7 +50,7 @@ func _process(_delta: float) -> void:
 			freeze = false
 			is_dropping = true
 			queue_teleport = Vector2($"../Hand".position.x - 32,replay_position_y)
-
+			wait_outcome = true
 			
 	if (pouch_score_reset == 5):
 		$"../Pouch".play("become_full")
@@ -56,13 +59,27 @@ func _process(_delta: float) -> void:
 		is_dropping = true
 	
 	if button_visible == true:
-		$"../Button".visible = true
+		$"../MakePouch".visible = true
 		visible = false
 	else:
 		visible = true
 		
-	if (score == 0 || pouches_done == 5):
-		get_tree().change_scene_to_file("res://main.tscn")
+	if score == 0 && wait_outcome == false:
+		$"../ResetButton".visible = true
+		$"../Hand".speed = 0
+		visible = false
+	elif pouches_done == 5:
+		$"../WinButton".visible = true
+		$"../Hand".speed = 0
+		visible = false
+
+func _on_win_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://main.tscn")
+
+
+func _on_reset_button_pressed() -> void:
+	get_tree().reload_current_scene()
+
 
 
 
@@ -75,6 +92,8 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	position.x = $"../Hand".position.x - 32
 	pouch_score_reset += 1
 	is_dropping = false
+	if pouches_done <4:
+		wait_outcome = false
 
 	
 
@@ -86,6 +105,7 @@ func _on_area_2d_nothing_body_entered(body: Node2D) -> void:
 	speed = $"../Hand".speed
 	position.x  = $"../Hand".position.x - 32
 	is_dropping = false
+	wait_outcome = false
 
 	
 func freeze_coin() -> void:
@@ -96,9 +116,10 @@ func _on_timer_timeout() -> void:
 	visible = true
 
 
-func _on_button_pressed() -> void:
+
+func _on_make_pouch_pressed() -> void:
 	emit_signal("full_pouch")
 	pouches_done += 1
 	button_visible = false
-	$"../Button".visible = false
-	is_dropping = false
+	$"../MakePouch".visible = false
+	is_dropping = false # Replace with function body.
