@@ -130,7 +130,7 @@ GRAB A NEW ONE"
 position = Vector2(580.5, 430)
 scale = Vector2(2.41882, 1.87778)
 stream = ExtResource("5_leoer")
-pitch_scale = 1.3
+pitch_scale = 1.2
 script = ExtResource("6_p7iyk")
 
 [node name="SoundTimer" type="Timer" parent="SucessCoin"]
@@ -141,7 +141,7 @@ one_shot = true
 position = Vector2(576.5, 674)
 scale = Vector2(2.41882, 1.87778)
 stream = ExtResource("7_58qgw")
-pitch_scale = 1.6
+pitch_scale = 1.3
 script = ExtResource("7_raqij")
 
 [node name="WinButton" type="Button" parent="."]
@@ -169,6 +169,7 @@ TRY AGAIN"
 [connection signal="speed_up" from="Coin" to="Hand" method="_on_coin_speed_up"]
 [connection signal="speed_up" from="Coin" to="Timer" method="_on_coin_speed_up"]
 [connection signal="speed_up" from="Coin" to="SucessCoin" method="_on_coin_speed_up"]
+[connection signal="winpouch" from="Coin" to="Pouch" method="_on_coin_winpouch"]
 [connection signal="dontplaysfx" from="Pouch" to="SucessCoin" method="_on_pouch_dontplaysfx"]
 [connection signal="body_entered" from="Pouch/Area2D" to="Coin" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer" to="Coin" method="_on_timer_timeout"]

@@ -2,6 +2,7 @@ extends AnimatedSprite2D
 
 var full = false
 var go_back = false
+var game_won = false
 
 signal dontplaysfx
 
@@ -22,7 +23,13 @@ func _process(delta: float) -> void:
 		position.x += 2.7
 	if position.x >= 576:
 		go_back = false
+	if game_won == true:
+		if position.x <= -100:
+			queue_free()
 
 func _on_coin_full_pouch() -> void:
 	full = true
 	emit_signal("dontplaysfx")
+	
+func _on_coin_winpouch() -> void:
+	game_won = true

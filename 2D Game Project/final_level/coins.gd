@@ -4,6 +4,7 @@ extends RigidBody2D
 signal speed_up
 signal no_speed_up
 signal full_pouch
+signal winpouch
 
 var replay_position_y = position.y
 var score = 50
@@ -71,6 +72,7 @@ func _process(_delta: float) -> void:
 	elif pouches_done == 5:
 		$"../WinButton".visible = true
 		$"../Hand".speed = 0
+		emit_signal("winpouch")
 		visible = false
 
 func _on_win_button_pressed() -> void:
@@ -79,8 +81,6 @@ func _on_win_button_pressed() -> void:
 
 func _on_reset_button_pressed() -> void:
 	get_tree().reload_current_scene()
-
-
 
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
