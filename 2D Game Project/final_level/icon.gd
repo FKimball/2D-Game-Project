@@ -27,7 +27,7 @@ func _physics_process(_delta: float) -> void:
 	
 func _ready() -> void:
 	pass
-
+		
 func _process(_delta: float) -> void: 
 	if in_workbench == true:
 		if Input.is_action_just_pressed("ui_accept"):

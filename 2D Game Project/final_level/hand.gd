@@ -1,4 +1,4 @@
-extends ColorRect
+extends Sprite2D
 
 @export var speed = 1.1
 
@@ -17,5 +17,8 @@ func _process(_delta: float) -> void:
 
 
 func _on_coin_speed_up() -> void:
-	speed += 0.1
+	if speed < 0:
+		speed -= 0.1
+	elif speed > 0:
+		speed += 0.1
 	
