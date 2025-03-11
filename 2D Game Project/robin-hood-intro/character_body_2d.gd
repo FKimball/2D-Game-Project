@@ -1,25 +1,43 @@
 extends CharacterBody2D
 
+@export var point_a: Vector2
+@export var point_b: Vector2
+@export var speed: float = 100.0
+@export var stop_time: float = 3.0  # Time to stop at each point
+@export var spawn_point: Vector2 = Vector2(0,0)
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@onready var animated_sprite = $AnimatedSprite2D8  # Ensure an AnimatedSprite2D node exists
 
+var target: Vector2
+var can_move: bool = true
 
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+func _ready():
+	target = point_b  # Start moving towards point_b first
+	animated_sprite.play("Run")  # Start walking animation
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+func _physics_process(delta):
+	if not can_move:
+		return
+	
+	if abs(global_position.x - target.x) < 5.0:
+		can_move = false
+		animated_sprite.play("Idle")  # Play idle animation when stopping
+		await get_tree().create_timer(stop_time).timeout
+		target = point_a if target == point_b else point_b  # Switch target
+		animated_sprite.play("Run")  # Resume walking animation
+		can_move = true
+	
+	var direction = Vector2((target.x - global_position.x), 0).normalized()
+	
+	# Flip sprite based on movement direction
+	if direction.x > 0:
+		animated_sprite.flip_h = false  # Facing right
+	elif direction.x < 0:
+		animated_sprite.flip_h = true   # Facing left
+	
+	velocity = direction * speed
 	move_and_slide()
+	
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		body.global_position = spawn_point

@@ -1,9 +1,13 @@
 extends CharacterBody2D
 
+@export var spawn_point: Vector2
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+func ready():
+	spawn_point = Vector2(0,0)
+	global_position = spawn_point
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -23,3 +27,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func _on_Enemy_area_entered(area: Area2D):
+	if area.is_in_group("enemy"):
+		global_position = spawn_point
