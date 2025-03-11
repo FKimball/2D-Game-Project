@@ -186,6 +186,6 @@ shape = SubResource("CapsuleShape2D_6nsdh")
 
 [node name="hit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_sk7r4")
-volume_db = 15.0
+volume_db = 8.067
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

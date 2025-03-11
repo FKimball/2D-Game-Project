@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://cjuu017ka8shi"]
+[gd_scene load_steps=12 format=3 uid="uid://cjuu017ka8shi"]
 
 [ext_resource type="Texture2D" uid="uid://c6gifsebkm3xh" path="res://Assets/coins.png" id="1_pctbe"]
 [ext_resource type="Script" path="res://coin.gd" id="2_yfbc8"]
-[ext_resource type="AudioStream" uid="uid://bkqernybvkntq" path="res://Assets/coin-pickup-98269.mp3" id="3_jic32"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ia1oj"]
 atlas = ExtResource("1_pctbe")
@@ -70,16 +69,13 @@ texture_filter = 1
 position = Vector2(84, 54)
 sprite_frames = SubResource("SpriteFrames_i0axd")
 animation = &"spin"
-frame_progress = 0.68815
+frame_progress = 0.664091
 script = ExtResource("2_yfbc8")
+coin_value = 5
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_dq1qu")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_jic32")
-volume_db = 24.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
