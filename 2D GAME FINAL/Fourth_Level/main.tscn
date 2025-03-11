@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://cckkuixq1qxl5"]
+
+[ext_resource type="PackedScene" uid="uid://bfojjnkgjrjqr" path="res://archer.tscn" id="1_bg2fy"]
+[ext_resource type="Texture2D" uid="uid://cgvgvw4gc4qo" path="res://Assets/Workbench.webp" id="2_43pt5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ee6u8"]
+size = Vector2(1744, 51.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rds8d"]
+size = Vector2(144, 92)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="doortop" type="ColorRect" parent="."]
+offset_left = 1081.0
+offset_top = 129.0
+offset_right = 1125.0
+offset_bottom = 449.0
+
+[node name="Floor" type="ColorRect" parent="."]
+offset_left = -3.0
+offset_top = 609.0
+offset_right = 1718.0
+offset_bottom = 649.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D"]
+position = Vector2(866, 24.25)
+shape = SubResource("RectangleShape2D_ee6u8")
+
+[node name="Icon" parent="." instance=ExtResource("1_bg2fy")]
+position = Vector2(370, 448)
+
+[node name="Workbench" type="Sprite2D" parent="."]
+z_index = -7
+position = Vector2(804.75, 564.75)
+scale = Vector2(0.371094, 0.310764)
+texture = ExtResource("2_43pt5")
+
+[node name="Area2D" type="Area2D" parent="Workbench"]
+position = Vector2(-163.705, -465.788)
+scale = Vector2(2.69474, 3.21788)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Workbench/Area2D"]
+position = Vector2(62, 141)
+shape = SubResource("RectangleShape2D_rds8d")
+debug_color = Color(0.407579, 0.785746, 0.955869, 0.42)
+
+[connection signal="body_shape_entered" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_entered"]
+[connection signal="body_shape_exited" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_exited"]
