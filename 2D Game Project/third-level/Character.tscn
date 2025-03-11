@@ -164,7 +164,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kxjta"]
 radius = 9.0
-height = 38.6667
+height = 37.3333
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(1.5, 1.5)
@@ -174,7 +174,7 @@ script = ExtResource("1_rnr3i")
 texture_filter = 1
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_l0fm0")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
