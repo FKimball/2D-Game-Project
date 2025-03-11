@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://boe5ovp0q5y8e"
-path="res://.godot/imported/myst.png-088efd74c757957808366d971d9c2322.ctex"
+path="res://.godot/imported/myst.png-f0b1d4c64755064ed505d6e7cfcf64cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Super Mountain Dusk Files/Assets/version B/Layers/myst.png"
-dest_files=["res://.godot/imported/myst.png-088efd74c757957808366d971d9c2322.ctex"]
+source_file="res://First_Level/Super Mountain Dusk Files/Assets/version B/Layers/myst.png"
+dest_files=["res://.godot/imported/myst.png-f0b1d4c64755064ed505d6e7cfcf64cd.ctex"]
 
 [params]
 

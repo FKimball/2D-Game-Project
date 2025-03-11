@@ -1,10 +1,10 @@
 [gd_scene load_steps=33 format=3 uid="uid://d2cj6j7s56mv3"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_ds82u"]
-[ext_resource type="Texture2D" uid="uid://d1fwjp4hikd16" path="res://Final/Low attack.png" id="2_1poyp"]
-[ext_resource type="FontFile" uid="uid://bhhtouvxxseif" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="2_o5mku"]
-[ext_resource type="Texture2D" uid="uid://bf310g44avhnm" path="res://il_fullxfull.5021761641_r78a.jpg.webp" id="3_wyjpl"]
-[ext_resource type="Texture2D" uid="uid://br4s0xdg0dkc3" path="res://Final/Idle and running.png" id="4_jrigy"]
+[ext_resource type="Script" path="res://First_Level/menu.gd" id="1_ds82u"]
+[ext_resource type="Texture2D" uid="uid://d1fwjp4hikd16" path="res://First_Level/Final/Low attack.png" id="2_1poyp"]
+[ext_resource type="FontFile" uid="uid://bhhtouvxxseif" path="res://First_Level/arcadeclassic/ARCADECLASSIC.TTF" id="2_o5mku"]
+[ext_resource type="Texture2D" uid="uid://bf310g44avhnm" path="res://First_Level/il_fullxfull.5021761641_r78a.jpg.webp" id="3_wyjpl"]
+[ext_resource type="Texture2D" uid="uid://br4s0xdg0dkc3" path="res://First_Level/Final/Idle and running.png" id="4_jrigy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4an52"]
 
