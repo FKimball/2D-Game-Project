@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn8damtg852l5"
-path="res://.godot/imported/parallax-mountain-montain-far.png-efbb0515b803783ea0eff7d30f7ea75e.ctex"
+path="res://.godot/imported/parallax-mountain-montain-far.png-2ca9e199dd6ec28ba6416f6b8dc58243.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://First_Level/Super Mountain Dusk Files/Assets/Old Version/layers/parallax-mountain-montain-far.png"
-dest_files=["res://.godot/imported/parallax-mountain-montain-far.png-efbb0515b803783ea0eff7d30f7ea75e.ctex"]
+source_file="res://Super Mountain Dusk Files/Assets/Old Version/layers/parallax-mountain-montain-far.png"
+dest_files=["res://.godot/imported/parallax-mountain-montain-far.png-2ca9e199dd6ec28ba6416f6b8dc58243.ctex"]
 
 [params]
 

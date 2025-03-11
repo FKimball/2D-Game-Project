@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8vr3lt14qh4m"
-path="res://.godot/imported/terrain_.png-f0b5b498d8cbf19ab1da335db10cfa68.ctex"
+path="res://.godot/imported/terrain_.png-857daa013456bf6435643250126bed16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://First_Level/fourSeasonsPlatformer_ [tileset, version 2.0]/background_/terrain_.png"
-dest_files=["res://.godot/imported/terrain_.png-f0b5b498d8cbf19ab1da335db10cfa68.ctex"]
+source_file="res://fourSeasonsPlatformer_ [tileset, version 2.0]/background_/terrain_.png"
+dest_files=["res://.godot/imported/terrain_.png-857daa013456bf6435643250126bed16.ctex"]
 
 [params]
 

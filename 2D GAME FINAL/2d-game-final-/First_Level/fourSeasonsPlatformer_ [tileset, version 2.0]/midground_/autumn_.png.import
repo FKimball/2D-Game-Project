@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bekenyddk2xr0"
-path="res://.godot/imported/autumn_.png-0a70c8eb875e0c8362346eea635cb9c7.ctex"
+path="res://.godot/imported/autumn_.png-470cd470eb16fbabe2fd6e114872c9ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://First_Level/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/autumn_.png"
-dest_files=["res://.godot/imported/autumn_.png-0a70c8eb875e0c8362346eea635cb9c7.ctex"]
+source_file="res://fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/autumn_.png"
+dest_files=["res://.godot/imported/autumn_.png-470cd470eb16fbabe2fd6e114872c9ec.ctex"]
 
 [params]
 

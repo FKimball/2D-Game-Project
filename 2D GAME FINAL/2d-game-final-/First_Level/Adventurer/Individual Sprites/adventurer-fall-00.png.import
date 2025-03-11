@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn3uefjeq036h"
-path="res://.godot/imported/adventurer-fall-00.png-33c66d87b34f901f565bf4155bd92500.ctex"
+path="res://.godot/imported/adventurer-fall-00.png-d454d916b28c31f5cdaeb30282910871.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://First_Level/Adventurer/Individual Sprites/adventurer-fall-00.png"
-dest_files=["res://.godot/imported/adventurer-fall-00.png-33c66d87b34f901f565bf4155bd92500.ctex"]
+source_file="res://Adventurer/Individual Sprites/adventurer-fall-00.png"
+dest_files=["res://.godot/imported/adventurer-fall-00.png-d454d916b28c31f5cdaeb30282910871.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dssoyhlq1xeyu"
-path="res://.godot/imported/far-trees.png-aca742cd660108f947621cd8c7e776a5.ctex"
+path="res://.godot/imported/far-trees.png-4c052daee79b0b1f1b69ed8f63fa6d44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://First_Level/Super Mountain Dusk Files/Assets/version B/Layers/far-trees.png"
-dest_files=["res://.godot/imported/far-trees.png-aca742cd660108f947621cd8c7e776a5.ctex"]
+source_file="res://Super Mountain Dusk Files/Assets/version B/Layers/far-trees.png"
+dest_files=["res://.godot/imported/far-trees.png-4c052daee79b0b1f1b69ed8f63fa6d44.ctex"]
 
 [params]
 

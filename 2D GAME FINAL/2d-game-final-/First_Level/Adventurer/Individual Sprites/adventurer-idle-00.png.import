@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2ovjcw4ge7kq"
-path="res://.godot/imported/adventurer-idle-00.png-388cadd55aca825472b4b7cd4ca39bb2.ctex"
+path="res://.godot/imported/adventurer-idle-00.png-bef7f8f0995d1573cdd90ccc4fcd717a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://First_Level/Adventurer/Individual Sprites/adventurer-idle-00.png"
-dest_files=["res://.godot/imported/adventurer-idle-00.png-388cadd55aca825472b4b7cd4ca39bb2.ctex"]
+source_file="res://Adventurer/Individual Sprites/adventurer-idle-00.png"
+dest_files=["res://.godot/imported/adventurer-idle-00.png-bef7f8f0995d1573cdd90ccc4fcd717a.ctex"]
 
 [params]
 

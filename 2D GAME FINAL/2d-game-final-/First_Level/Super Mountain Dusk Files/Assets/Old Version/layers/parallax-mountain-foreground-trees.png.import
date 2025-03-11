@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dh87ks4ujpkt1"
-path="res://.godot/imported/parallax-mountain-foreground-trees.png-e3a402fcce07b2dd7df178ff6793d9e1.ctex"
+path="res://.godot/imported/parallax-mountain-foreground-trees.png-d107040de460273c630f3c37628bdc30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://First_Level/Super Mountain Dusk Files/Assets/Old Version/layers/parallax-mountain-foreground-trees.png"
-dest_files=["res://.godot/imported/parallax-mountain-foreground-trees.png-e3a402fcce07b2dd7df178ff6793d9e1.ctex"]
+source_file="res://Super Mountain Dusk Files/Assets/Old Version/layers/parallax-mountain-foreground-trees.png"
+dest_files=["res://.godot/imported/parallax-mountain-foreground-trees.png-d107040de460273c630f3c37628bdc30.ctex"]
 
 [params]
 

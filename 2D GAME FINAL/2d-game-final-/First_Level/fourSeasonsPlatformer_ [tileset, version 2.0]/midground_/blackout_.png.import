@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjgkq8f821rim"
-path="res://.godot/imported/blackout_.png-4e7271fa44f8559cbbf87b9253a22889.ctex"
+path="res://.godot/imported/blackout_.png-295d60b354f06e5f34dceeb53894c033.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://First_Level/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/blackout_.png"
-dest_files=["res://.godot/imported/blackout_.png-4e7271fa44f8559cbbf87b9253a22889.ctex"]
+source_file="res://fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/blackout_.png"
+dest_files=["res://.godot/imported/blackout_.png-295d60b354f06e5f34dceeb53894c033.ctex"]
 
 [params]
 
