@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://cjuu017ka8shi"]
+
+[ext_resource type="Texture2D" uid="uid://c6gifsebkm3xh" path="res://Assets/coins.png" id="1_pctbe"]
+[ext_resource type="Script" path="res://coin.gd" id="2_yfbc8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia1oj"]
+atlas = ExtResource("1_pctbe")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2s6qr"]
+atlas = ExtResource("1_pctbe")
+region = Rect2(18, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qps03"]
+atlas = ExtResource("1_pctbe")
+region = Rect2(36, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvvjs"]
+atlas = ExtResource("1_pctbe")
+region = Rect2(54, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75uae"]
+atlas = ExtResource("1_pctbe")
+region = Rect2(72, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7gnv"]
+atlas = ExtResource("1_pctbe")
+region = Rect2(90, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bn21"]
+atlas = ExtResource("1_pctbe")
+region = Rect2(108, 0, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i0axd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ia1oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2s6qr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qps03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvvjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75uae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7gnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bn21")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dq1qu"]
+radius = 6.0
+height = 16.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(84, 54)
+sprite_frames = SubResource("SpriteFrames_i0axd")
+animation = &"spin"
+frame_progress = 0.664091
+script = ExtResource("2_yfbc8")
+coin_value = 5
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_dq1qu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
