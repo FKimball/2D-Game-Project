@@ -1,12 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://bv7w3gyut4iqi"]
+[gd_scene load_steps=18 format=3 uid="uid://bv7w3gyut4iqi"]
 
+[ext_resource type="Texture2D" uid="uid://die4xb73hlnw7" path="res://Assets/Hand.png" id="1_bgbwd"]
 [ext_resource type="Script" path="res://hand.gd" id="1_j8bdt"]
 [ext_resource type="Script" path="res://coins.gd" id="2_aleti"]
 [ext_resource type="Texture2D" uid="uid://dbi7te5ydan8i" path="res://Assets/coins.png" id="3_ad6ry"]
 [ext_resource type="Script" path="res://timer.gd" id="4_o1da5"]
 [ext_resource type="Texture2D" uid="uid://codkulxijnshv" path="res://Assets/Pouch.png" id="4_offin"]
 [ext_resource type="Script" path="res://pouch.gd" id="5_k2hqk"]
+[ext_resource type="AudioStream" uid="uid://ng246tpwyudt" path="res://Assets/coin_success.mp3" id="5_leoer"]
 [ext_resource type="Texture2D" uid="uid://bh26v7htpr0uv" path="res://Assets/PouchFull.png" id="5_wjcx5"]
+[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="6_p7iyk"]
+[ext_resource type="AudioStream" uid="uid://dhl62r34s1qwk" path="res://Assets/coin_fail.mp3" id="7_58qgw"]
+[ext_resource type="Script" path="res://audio_stream_fail.gd" id="7_raqij"]
 [ext_resource type="Texture2D" uid="uid://c1p1wop1ao60x" path="res://Assets/wood_bg.jpg" id="8_g1js7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnw3g"]
@@ -69,15 +74,15 @@ offset_bottom = 58.0
 text = "Pouches left to make: X/5
 "
 
-[node name="Hand" type="ColorRect" parent="."]
-offset_left = 556.0
-offset_top = 67.0
-offset_right = 604.0
-offset_bottom = 107.0
+[node name="Hand" type="Sprite2D" parent="."]
+position = Vector2(612, 98)
+texture = ExtResource("1_bgbwd")
 script = ExtResource("1_j8bdt")
 
 [node name="Coin" type="RigidBody2D" parent="."]
 position = Vector2(577, 114)
+freeze = true
+continuous_cd = 2
 script = ExtResource("2_aleti")
 
 [node name="Icon" type="Sprite2D" parent="Coin"]
@@ -113,19 +118,62 @@ position = Vector2(607.5, 330)
 scale = Vector2(2.41882, 1.87778)
 texture = ExtResource("8_g1js7")
 
-[node name="Button" type="Button" parent="."]
+[node name="MakePouch" type="Button" parent="."]
 offset_left = 663.0
 offset_top = 504.0
 offset_right = 886.0
 offset_bottom = 568.0
 text = "POUCH FULL!
-MAKE A NEW ONE"
+GRAB A NEW ONE"
+
+[node name="SucessCoin" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(580.5, 430)
+scale = Vector2(2.41882, 1.87778)
+stream = ExtResource("5_leoer")
+pitch_scale = 1.2
+script = ExtResource("6_p7iyk")
+
+[node name="SoundTimer" type="Timer" parent="SucessCoin"]
+wait_time = 2.6
+one_shot = true
+
+[node name="FailCoin" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(576.5, 674)
+scale = Vector2(2.41882, 1.87778)
+stream = ExtResource("7_58qgw")
+pitch_scale = 1.3
+script = ExtResource("7_raqij")
+
+[node name="WinButton" type="Button" parent="."]
+offset_left = 455.0
+offset_top = 240.0
+offset_right = 695.0
+offset_bottom = 344.0
+text = "WELL DONE! LET'S GO
+DISTRIBUTE THE COINS!"
+
+[node name="ResetButton" type="Button" parent="."]
+offset_left = 455.0
+offset_top = 242.0
+offset_right = 695.0
+offset_bottom = 342.0
+text = "YOU DID NOT MAKE
+ ENOUGH COIN POUCHES!
+
+TRY AGAIN"
 
 [connection signal="body_entered" from="Area2D Nothing" to="Coin" method="_on_area_2d_nothing_body_entered"]
 [connection signal="full_pouch" from="Coin" to="Pouch" method="_on_coin_full_pouch"]
 [connection signal="no_speed_up" from="Coin" to="Timer" method="_on_coin_no_speed_up"]
+[connection signal="no_speed_up" from="Coin" to="FailCoin" method="_on_coin_no_speed_up"]
 [connection signal="speed_up" from="Coin" to="Hand" method="_on_coin_speed_up"]
 [connection signal="speed_up" from="Coin" to="Timer" method="_on_coin_speed_up"]
+[connection signal="speed_up" from="Coin" to="SucessCoin" method="_on_coin_speed_up"]
+[connection signal="winpouch" from="Coin" to="Pouch" method="_on_coin_winpouch"]
+[connection signal="dontplaysfx" from="Pouch" to="SucessCoin" method="_on_pouch_dontplaysfx"]
 [connection signal="body_entered" from="Pouch/Area2D" to="Coin" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer" to="Coin" method="_on_timer_timeout"]
-[connection signal="pressed" from="Button" to="Coin" method="_on_button_pressed"]
+[connection signal="pressed" from="MakePouch" to="Coin" method="_on_make_pouch_pressed"]
+[connection signal="timeout" from="SucessCoin/SoundTimer" to="SucessCoin" method="_on_sound_timer_timeout"]
+[connection signal="pressed" from="WinButton" to="Coin" method="_on_win_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="Coin" method="_on_reset_button_pressed"]

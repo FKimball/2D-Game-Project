@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://b6yujd36pamin"]
+[gd_scene load_steps=28 format=3 uid="uid://b6yujd36pamin"]
 
 [ext_resource type="Texture2D" uid="uid://dhpmqbh4fa85i" path="res://Assets/FreeKnight_v1/_Idle.png" id="1_8d6ps"]
 [ext_resource type="Script" path="res://knight.gd" id="2_6fmma"]
 [ext_resource type="Texture2D" uid="uid://jnjnk37llavn" path="res://Assets/FreeKnight_v1/_Run.png" id="2_jtav1"]
+[ext_resource type="AudioStream" uid="uid://dbeq4rgpy1obp" path="res://Assets/mixkit-impact-of-a-strong-punch-2155.mp3" id="4_sk7r4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vfd5g"]
 atlas = ExtResource("1_8d6ps")
@@ -182,5 +183,9 @@ shape = SubResource("CapsuleShape2D_b1nw1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_6nsdh")
+
+[node name="hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_sk7r4")
+volume_db = 8.067
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

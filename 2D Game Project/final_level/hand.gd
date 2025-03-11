@@ -1,4 +1,4 @@
-extends ColorRect
+extends Sprite2D
 
 @export var speed = 1.1
 
@@ -9,7 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	position.x += speed
-	if position.x >= 776:
+	if position.x >= 826:
 		speed = speed*-1
 	elif position.x <= 276:
 		speed = speed*-1
@@ -17,5 +17,8 @@ func _process(_delta: float) -> void:
 
 
 func _on_coin_speed_up() -> void:
-	speed += 0.1
+	if speed < 0:
+		speed -= 0.1
+	elif speed > 0:
+		speed += 0.1
 	

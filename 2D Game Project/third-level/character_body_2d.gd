@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var spawn_point: Vector2
 
+@onready var sound = $AudioStreamPlayer2D
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
