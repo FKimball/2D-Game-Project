@@ -1,11 +1,11 @@
 [gd_scene load_steps=31 format=4 uid="uid://bbx8plk0ad8aa"]
 
-[ext_resource type="Texture2D" uid="uid://cku0ih7qgv8ql" path="res://castle_tileset.png" id="1_w2xxk"]
-[ext_resource type="PackedScene" uid="uid://1raojc0wjvl8" path="res://archer.tscn" id="2_wsr4t"]
-[ext_resource type="PackedScene" uid="uid://bnnel5bbp6vc1" path="res://coin.tscn" id="3_n0o3b"]
-[ext_resource type="Script" path="res://label.gd" id="4_s0rpj"]
-[ext_resource type="Texture2D" uid="uid://7aqr8dqwkdd" path="res://_Idle.png" id="5_otthw"]
-[ext_resource type="Texture2D" uid="uid://lah4ej8h16wa" path="res://_Run.png" id="6_3ykgh"]
+[ext_resource type="Texture2D" uid="uid://cku0ih7qgv8ql" path="res://Second_Level/castle_tileset.png" id="1_w2xxk"]
+[ext_resource type="PackedScene" uid="uid://1raojc0wjvl8" path="res://Second_Level/archer.tscn" id="2_wsr4t"]
+[ext_resource type="PackedScene" uid="uid://bnnel5bbp6vc1" path="res://Second_Level/coin.tscn" id="3_n0o3b"]
+[ext_resource type="Script" path="res://Second_Level/label.gd" id="4_s0rpj"]
+[ext_resource type="Texture2D" uid="uid://7aqr8dqwkdd" path="res://Second_Level/_Idle.png" id="5_otthw"]
+[ext_resource type="Texture2D" uid="uid://lah4ej8h16wa" path="res://Second_Level/_Run.png" id="6_3ykgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ko02"]
 texture = ExtResource("1_w2xxk")
@@ -590,30 +590,39 @@ color = Color(0, 0, 0, 1)
 
 [node name="Node2D2" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(318, 430)
+script = null
 
 [node name="Node2D2" parent="Node2D2" instance=ExtResource("3_n0o3b")]
 position = Vector2(194, -52)
+script = null
 
 [node name="Node2D2" parent="Node2D2/Node2D2" instance=ExtResource("3_n0o3b")]
 position = Vector2(175, 87)
+script = null
 
 [node name="Node2D2" parent="Node2D2/Node2D2/Node2D2" instance=ExtResource("3_n0o3b")]
 position = Vector2(209, -64)
+script = null
 
 [node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2" instance=ExtResource("3_n0o3b")]
 position = Vector2(162, -84)
+script = null
 
 [node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" instance=ExtResource("3_n0o3b")]
 position = Vector2(-178, -96)
+script = null
 
 [node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" instance=ExtResource("3_n0o3b")]
 position = Vector2(-179, -64)
+script = null
 
 [node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" instance=ExtResource("3_n0o3b")]
 position = Vector2(-223, -30)
+script = null
 
 [node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" instance=ExtResource("3_n0o3b")]
 position = Vector2(-204, 96)
+script = null
 
 [node name="Label" type="Label" parent="."]
 offset_left = 1079.0

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eh2uhtfl14vs"
-path="res://.godot/imported/desertDungeon_.png-8bc83a53d3e200385880479a530bf797.ctex"
+path="res://.godot/imported/desertDungeon_.png-14b26d188948b12ae400d345d5c169f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fourSeasonsPlatformer_ [tileset, version 2.0]/background_/desertDungeon_.png"
-dest_files=["res://.godot/imported/desertDungeon_.png-8bc83a53d3e200385880479a530bf797.ctex"]
+source_file="res://First_Level/fourSeasonsPlatformer_ [tileset, version 2.0]/background_/desertDungeon_.png"
+dest_files=["res://.godot/imported/desertDungeon_.png-14b26d188948b12ae400d345d5c169f8.ctex"]
 
 [params]
 

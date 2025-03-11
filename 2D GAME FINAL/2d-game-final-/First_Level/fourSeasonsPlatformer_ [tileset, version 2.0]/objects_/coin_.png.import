@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dti5flslvp4fg"
-path="res://.godot/imported/coin_.png-f6eaddc0777036bc9df8e3873e08eb50.ctex"
+path="res://.godot/imported/coin_.png-aec7ece89e8496024a4876aec45d42ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fourSeasonsPlatformer_ [tileset, version 2.0]/objects_/coin_.png"
-dest_files=["res://.godot/imported/coin_.png-f6eaddc0777036bc9df8e3873e08eb50.ctex"]
+source_file="res://First_Level/fourSeasonsPlatformer_ [tileset, version 2.0]/objects_/coin_.png"
+dest_files=["res://.godot/imported/coin_.png-aec7ece89e8496024a4876aec45d42ee.ctex"]
 
 [params]
 

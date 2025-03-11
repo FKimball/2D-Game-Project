@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dek7nc4f4scy"
-path="res://.godot/imported/mountains.png-1ad136f5fd89a2060de145a64f2b7720.ctex"
+path="res://.godot/imported/mountains.png-3cc6302cf467e2e11322d2233ac7c973.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Super Mountain Dusk Files/Assets/version A/Layers/mountains.png"
-dest_files=["res://.godot/imported/mountains.png-1ad136f5fd89a2060de145a64f2b7720.ctex"]
+source_file="res://First_Level/Super Mountain Dusk Files/Assets/version A/Layers/mountains.png"
+dest_files=["res://.godot/imported/mountains.png-3cc6302cf467e2e11322d2233ac7c973.ctex"]
 
 [params]
 

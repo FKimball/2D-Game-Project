@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvg3ijnnhd302"
-path="res://.godot/imported/sky.png-ec6a7d6572017de73724a516245ea3d1.ctex"
+path="res://.godot/imported/sky.png-1565bc9c255162a8b521dd82e2a28ffa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Super Mountain Dusk Files/Assets/version B/Layers/sky.png"
-dest_files=["res://.godot/imported/sky.png-ec6a7d6572017de73724a516245ea3d1.ctex"]
+source_file="res://First_Level/Super Mountain Dusk Files/Assets/version B/Layers/sky.png"
+dest_files=["res://.godot/imported/sky.png-1565bc9c255162a8b521dd82e2a28ffa.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfegwkg43dw7h"
-path="res://.godot/imported/adventurer-crouch-00.png-88fb0998655a16e7b8c5ac21d7e4df21.ctex"
+path="res://.godot/imported/adventurer-crouch-00.png-d6a7fd6f25e8d6b8c1d6760983cb1bb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Adventurer/Individual Sprites/adventurer-crouch-00.png"
-dest_files=["res://.godot/imported/adventurer-crouch-00.png-88fb0998655a16e7b8c5ac21d7e4df21.ctex"]
+source_file="res://First_Level/Adventurer/Individual Sprites/adventurer-crouch-00.png"
+dest_files=["res://.godot/imported/adventurer-crouch-00.png-d6a7fd6f25e8d6b8c1d6760983cb1bb8.ctex"]
 
 [params]
 
