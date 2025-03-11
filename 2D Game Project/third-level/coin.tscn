@@ -69,8 +69,9 @@ texture_filter = 1
 position = Vector2(84, 54)
 sprite_frames = SubResource("SpriteFrames_i0axd")
 animation = &"spin"
-frame_progress = 0.68815
+frame_progress = 0.664091
 script = ExtResource("2_yfbc8")
+coin_value = 5
 
 [node name="Area2D" type="Area2D" parent="."]
 

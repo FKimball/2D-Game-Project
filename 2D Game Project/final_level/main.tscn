@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cckkuixq1qxl5"]
+[gd_scene load_steps=5 format=3 uid="uid://cckkuixq1qxl5"]
 
 [ext_resource type="PackedScene" uid="uid://bfojjnkgjrjqr" path="res://archer.tscn" id="1_bg2fy"]
+[ext_resource type="Texture2D" uid="uid://cgvgvw4gc4qo" path="res://Assets/Workbench.webp" id="2_43pt5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ee6u8"]
 size = Vector2(1744, 51.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rds8d"]
-size = Vector2(235, 197)
+size = Vector2(144, 92)
 
 [node name="Node2D" type="Node2D"]
 
@@ -29,20 +30,20 @@ position = Vector2(866, 24.25)
 shape = SubResource("RectangleShape2D_ee6u8")
 
 [node name="Icon" parent="." instance=ExtResource("1_bg2fy")]
-position = Vector2(369, 507)
+position = Vector2(370, 448)
 
-[node name="Workbench" type="ColorRect" parent="."]
-z_index = -9
-offset_left = 744.0
-offset_top = 420.0
-offset_right = 964.0
-offset_bottom = 610.0
-color = Color(0.84984, 0.58652, 0.504131, 1)
+[node name="Workbench" type="Sprite2D" parent="."]
+z_index = -7
+position = Vector2(804.75, 564.75)
+scale = Vector2(0.371094, 0.310764)
+texture = ExtResource("2_43pt5")
 
 [node name="Area2D" type="Area2D" parent="Workbench"]
+position = Vector2(-163.705, -465.788)
+scale = Vector2(2.69474, 3.21788)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Workbench/Area2D"]
-position = Vector2(107.5, 88.5)
+position = Vector2(62, 141)
 shape = SubResource("RectangleShape2D_rds8d")
 debug_color = Color(0.407579, 0.785746, 0.955869, 0.42)
 
