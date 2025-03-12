@@ -4,16 +4,16 @@ extends CharacterBody2D
 @export var point_b: Vector2
 @export var speed: float = 100.0
 @export var stop_time: float = 3.0  # Time to stop at each point
-@export var spawn_point: Vector2 = Vector2(0,0)
+@export var spawn_point: Vector2
 
-@onready var animated_sprite = $AnimatedSprite2D8  # Ensure an AnimatedSprite2D node exists
+@onready var animated_sprite = $AnimatedSprite2D  # Ensure an AnimatedSprite2D node exists
 
 var target: Vector2
 var can_move: bool = true
 
 func _ready():
 	target = point_b  # Start moving towards point_b first
-	animated_sprite.play("Run")  # Start walking animation
+	animated_sprite.play("run")  # Start walking animation
 
 func _physics_process(delta):
 	if not can_move:
@@ -21,10 +21,10 @@ func _physics_process(delta):
 	
 	if abs(global_position.x - target.x) < 5.0:
 		can_move = false
-		animated_sprite.play("Idle")  # Play idle animation when stopping
+		animated_sprite.play("idle")  # Play idle animation when stopping
 		await get_tree().create_timer(stop_time).timeout
 		target = point_a if target == point_b else point_b  # Switch target
-		animated_sprite.play("Run")  # Resume walking animation
+		animated_sprite.play("run")  # Resume walking animation
 		can_move = true
 	
 	var direction = Vector2((target.x - global_position.x), 0).normalized()
@@ -40,4 +40,5 @@ func _physics_process(delta):
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		$hit.play()
 		body.global_position = spawn_point

@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://bktp6xtyg3a0q"]
 
-[ext_resource type="Script" path="res://Third_Level/archer.gd" id="1_fqhyj"]
+[ext_resource type="Script" path="res://archer.gd" id="1_fqhyj"]
 [ext_resource type="Texture2D" uid="uid://crojv6teq1m6f" path="res://Third_Level/Assets/Archer/Idle and running.png" id="2_egx8s"]
 [ext_resource type="Texture2D" uid="uid://djtlab3fioan6" path="res://Third_Level/Assets/Archer/Jumping.png" id="3_xjd2v"]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=54 format=4 uid="uid://dpbv1mxyn24w8"]
 
-[ext_resource type="Texture2D" uid="uid://7aqr8dqwkdd" path="res://_Idle.png" id="1_fdqqn"]
-[ext_resource type="Texture2D" uid="uid://cku0ih7qgv8ql" path="res://castle_tileset.png" id="2_jrqlg"]
-[ext_resource type="Script" path="res://player.gd" id="3_3ykp6"]
-[ext_resource type="Texture2D" uid="uid://lah4ej8h16wa" path="res://_Run.png" id="4_20kka"]
-[ext_resource type="Texture2D" uid="uid://bd0puoqm1uny8" path="res://coins.png" id="5_xx2a7"]
+[ext_resource type="Texture2D" uid="uid://7aqr8dqwkdd" path="res://Second_Level/_Idle.png" id="1_fdqqn"]
+[ext_resource type="Texture2D" uid="uid://cku0ih7qgv8ql" path="res://Second_Level/castle_tileset.png" id="2_jrqlg"]
+[ext_resource type="Script" path="res://archer.gd" id="3_3ykp6"]
+[ext_resource type="Texture2D" uid="uid://lah4ej8h16wa" path="res://Second_Level/_Run.png" id="4_20kka"]
+[ext_resource type="Texture2D" uid="uid://bd0puoqm1uny8" path="res://Second_Level/coins.png" id="5_xx2a7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ys0s7"]
 atlas = ExtResource("1_fdqqn")
