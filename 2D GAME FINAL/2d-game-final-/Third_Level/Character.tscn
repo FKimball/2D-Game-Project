@@ -1,8 +1,8 @@
 [gd_scene load_steps=26 format=3 uid="uid://bktp6xtyg3a0q"]
 
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_rnr3i"]
-[ext_resource type="Texture2D" uid="uid://crojv6teq1m6f" path="res://Assets/Archer/Idle and running.png" id="2_egx8s"]
-[ext_resource type="Texture2D" uid="uid://djtlab3fioan6" path="res://Assets/Archer/Jumping.png" id="3_xjd2v"]
+[ext_resource type="Script" path="res://Third_Level/archer.gd" id="1_fqhyj"]
+[ext_resource type="Texture2D" uid="uid://crojv6teq1m6f" path="res://Third_Level/Assets/Archer/Idle and running.png" id="2_egx8s"]
+[ext_resource type="Texture2D" uid="uid://djtlab3fioan6" path="res://Third_Level/Assets/Archer/Jumping.png" id="3_xjd2v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iakbf"]
 atlas = ExtResource("2_egx8s")
@@ -168,7 +168,7 @@ height = 37.3333
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(1.5, 1.5)
-script = ExtResource("1_rnr3i")
+script = ExtResource("1_fqhyj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

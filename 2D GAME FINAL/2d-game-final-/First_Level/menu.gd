@@ -3,7 +3,7 @@ extends Control
 
 
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Robin hood Intro.tscn")
+	get_tree().change_scene_to_file("res://First_Level/Robin hood Intro.tscn")
 
 
 

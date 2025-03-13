@@ -1,29 +1,27 @@
-[gd_scene load_steps=101 format=4 uid="uid://bkfrej1s2a46g"]
+[gd_scene load_steps=87 format=4 uid="uid://bkfrej1s2a46g"]
 
-[ext_resource type="Texture2D" uid="uid://br4s0xdg0dkc3" path="res://Final/Idle and running.png" id="1_6xd1g"]
-[ext_resource type="Texture2D" uid="uid://wafaco7dedxa" path="res://fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/spring_.png" id="2_d8anv"]
-[ext_resource type="Texture2D" uid="uid://cwye8xg3wpejv" path="res://tileset.png" id="2_leas5"]
-[ext_resource type="Script" path="res://animated_sprite_2d.gd" id="2_lotyu"]
-[ext_resource type="Texture2D" uid="uid://bg4ad4ncc1tfb" path="res://Super Mountain Dusk Files/Assets/version A/Layers/far-clouds.png" id="4_vxudj"]
-[ext_resource type="Texture2D" uid="uid://8b3qp2gjw5fo" path="res://Super Mountain Dusk Files/Assets/version A/Layers/far-mountains.png" id="5_3u4jp"]
-[ext_resource type="Texture2D" uid="uid://ctwjym18x8gdb" path="res://Super Mountain Dusk Files/Assets/version A/Layers/trees.png" id="6_xrq3n"]
-[ext_resource type="Texture2D" uid="uid://d2ovjcw4ge7kq" path="res://Adventurer/Individual Sprites/adventurer-idle-00.png" id="8_brwpj"]
-[ext_resource type="Script" path="res://character_body_2d_2.gd" id="8_y1b6m"]
-[ext_resource type="Texture2D" uid="uid://cit8nhkep0yeb" path="res://Adventurer/Individual Sprites/adventurer-idle-01.png" id="9_d7t7n"]
-[ext_resource type="Texture2D" uid="uid://74w7buvcb0b4" path="res://Adventurer/Individual Sprites/adventurer-jump-00.png" id="10_2kvjy"]
-[ext_resource type="Texture2D" uid="uid://bkfljl0seiads" path="res://Adventurer/Individual Sprites/adventurer-idle-2-00.png" id="11_sqjgy"]
-[ext_resource type="Texture2D" uid="uid://blql0g1uxpcho" path="res://Adventurer/Individual Sprites/adventurer-idle-2-01.png" id="12_ybqmm"]
-[ext_resource type="Texture2D" uid="uid://bb0r3ar4djpxw" path="res://Adventurer/Individual Sprites/adventurer-idle-2-02.png" id="13_2dxjh"]
-[ext_resource type="Texture2D" uid="uid://caja8k23u8tr2" path="res://Adventurer/Individual Sprites/adventurer-idle-2-03.png" id="14_bofoc"]
-[ext_resource type="Texture2D" uid="uid://chsf84k3qq8kh" path="res://Adventurer/Individual Sprites/adventurer-die-04.png" id="15_et6od"]
-[ext_resource type="Texture2D" uid="uid://bqum20nx7f8wr" path="res://Adventurer/Individual Sprites/adventurer-die-05.png" id="16_rjubj"]
-[ext_resource type="Texture2D" uid="uid://cd385ixt2u4lq" path="res://Adventurer/Individual Sprites/adventurer-die-06.png" id="17_jd0ir"]
-[ext_resource type="Texture2D" uid="uid://c8vgfw8jx0gnp" path="res://Adventurer/Individual Sprites/adventurer-crnr-grb-00.png" id="18_blif8"]
-[ext_resource type="Script" path="res://area_2d.gd" id="20_swp8j"]
-[ext_resource type="Texture2D" uid="uid://b87mewky2saae" path="res://coins copy.png" id="21_4b5cl"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="22_nnv3e"]
-[ext_resource type="Texture2D" uid="uid://cmml7xhoir5e5" path="res://_Idle copy.png" id="23_pqcxh"]
-[ext_resource type="Texture2D" uid="uid://ctvk850dhmxe6" path="res://_Run copy.png" id="24_xsqdt"]
+[ext_resource type="Texture2D" uid="uid://wafaco7dedxa" path="res://First_Level/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/spring_.png" id="2_d8anv"]
+[ext_resource type="Texture2D" uid="uid://cwye8xg3wpejv" path="res://First_Level/tileset.png" id="2_leas5"]
+[ext_resource type="Texture2D" uid="uid://bg4ad4ncc1tfb" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/version A/Layers/far-clouds.png" id="4_vxudj"]
+[ext_resource type="Texture2D" uid="uid://8b3qp2gjw5fo" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/version A/Layers/far-mountains.png" id="5_3u4jp"]
+[ext_resource type="Texture2D" uid="uid://ctwjym18x8gdb" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/version A/Layers/trees.png" id="6_xrq3n"]
+[ext_resource type="PackedScene" uid="uid://bktp6xtyg3a0q" path="res://Third_Level/Character.tscn" id="8_1l8ak"]
+[ext_resource type="Texture2D" uid="uid://d2ovjcw4ge7kq" path="res://First_Level/Adventurer/Individual Sprites/adventurer-idle-00.png" id="8_brwpj"]
+[ext_resource type="Texture2D" uid="uid://cit8nhkep0yeb" path="res://First_Level/Adventurer/Individual Sprites/adventurer-idle-01.png" id="9_d7t7n"]
+[ext_resource type="Texture2D" uid="uid://74w7buvcb0b4" path="res://First_Level/Adventurer/Individual Sprites/adventurer-jump-00.png" id="10_2kvjy"]
+[ext_resource type="Texture2D" uid="uid://bkfljl0seiads" path="res://First_Level/Adventurer/Individual Sprites/adventurer-idle-2-00.png" id="11_sqjgy"]
+[ext_resource type="Texture2D" uid="uid://blql0g1uxpcho" path="res://First_Level/Adventurer/Individual Sprites/adventurer-idle-2-01.png" id="12_ybqmm"]
+[ext_resource type="Texture2D" uid="uid://bb0r3ar4djpxw" path="res://First_Level/Adventurer/Individual Sprites/adventurer-idle-2-02.png" id="13_2dxjh"]
+[ext_resource type="Texture2D" uid="uid://caja8k23u8tr2" path="res://First_Level/Adventurer/Individual Sprites/adventurer-idle-2-03.png" id="14_bofoc"]
+[ext_resource type="Texture2D" uid="uid://chsf84k3qq8kh" path="res://First_Level/Adventurer/Individual Sprites/adventurer-die-04.png" id="15_et6od"]
+[ext_resource type="Texture2D" uid="uid://bqum20nx7f8wr" path="res://First_Level/Adventurer/Individual Sprites/adventurer-die-05.png" id="16_rjubj"]
+[ext_resource type="Texture2D" uid="uid://cd385ixt2u4lq" path="res://First_Level/Adventurer/Individual Sprites/adventurer-die-06.png" id="17_jd0ir"]
+[ext_resource type="Texture2D" uid="uid://c8vgfw8jx0gnp" path="res://First_Level/Adventurer/Individual Sprites/adventurer-crnr-grb-00.png" id="18_blif8"]
+[ext_resource type="Script" path="res://First_Level/area_2d.gd" id="20_swp8j"]
+[ext_resource type="Texture2D" uid="uid://b87mewky2saae" path="res://First_Level/coins copy.png" id="21_4b5cl"]
+[ext_resource type="Script" path="res://First_Level/character_body_2d.gd" id="22_nnv3e"]
+[ext_resource type="Texture2D" uid="uid://cmml7xhoir5e5" path="res://First_Level/_Idle copy.png" id="23_pqcxh"]
+[ext_resource type="Texture2D" uid="uid://ctvk850dhmxe6" path="res://First_Level/_Run copy.png" id="24_xsqdt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rynn5"]
 texture = ExtResource("2_d8anv")
@@ -610,93 +608,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rynn5")
 sources/1 = SubResource("TileSetAtlasSource_t3ow8")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rsik6"]
-radius = 15.0
-height = 38.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ell3"]
-atlas = ExtResource("1_6xd1g")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u18jb"]
-atlas = ExtResource("1_6xd1g")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rxjfu"]
-atlas = ExtResource("1_6xd1g")
-region = Rect2(0, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5m3nc"]
-atlas = ExtResource("1_6xd1g")
-region = Rect2(64, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_miikp"]
-atlas = ExtResource("1_6xd1g")
-region = Rect2(128, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j83bq"]
-atlas = ExtResource("1_6xd1g")
-region = Rect2(192, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fv3xc"]
-atlas = ExtResource("1_6xd1g")
-region = Rect2(256, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b18of"]
-atlas = ExtResource("1_6xd1g")
-region = Rect2(320, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rjaas"]
-atlas = ExtResource("1_6xd1g")
-region = Rect2(384, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qh2at"]
-atlas = ExtResource("1_6xd1g")
-region = Rect2(448, 64, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xepsw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2ell3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u18jb")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rxjfu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5m3nc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_miikp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j83bq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fv3xc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b18of")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rjaas")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qh2at")
-}],
-"loop": true,
-"name": &"Run",
-"speed": 9.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_l8svt"]
 atlas = ExtResource("8_brwpj")
 region = Rect2(0, 0, 50, 37)
@@ -1219,25 +1130,6 @@ position = Vector2(247.5, -4)
 scale = Vector2(1.02885, 1)
 texture = ExtResource("6_xrq3n")
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="." groups=["player"]]
-script = ExtResource("8_y1b6m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
-position = Vector2(-1, 1)
-shape = SubResource("CapsuleShape2D_rsik6")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2/CollisionShape2D"]
-texture_filter = 1
-position = Vector2(1, -1.75)
-scale = Vector2(1, 0.960938)
-sprite_frames = SubResource("SpriteFrames_xepsw")
-animation = &"Idle"
-autoplay = "Idle"
-script = ExtResource("2_lotyu")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D2/CollisionShape2D/AnimatedSprite2D"]
-zoom = Vector2(7, 7)
-
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
@@ -1249,6 +1141,8 @@ sprite_frames = SubResource("SpriteFrames_k4rb8")
 autoplay = "default"
 frame_progress = 0.0615686
 flip_h = true
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("8_1l8ak")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 show_behind_parent = true
@@ -1573,7 +1467,5 @@ layout_mode = 2
 text = "Press the \"Right\" and \"Left\" Keys to Move"
 label_settings = SubResource("LabelSettings_g81fi")
 
-[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D2" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="CharacterBody2D3/Area2D" to="CharacterBody2D2" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="CharacterBody2D3/Area2D" to="CharacterBody2D3" method="_on_area_2d_body_entered"]
