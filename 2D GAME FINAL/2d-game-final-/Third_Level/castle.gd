@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var points_label: Label = %Label 
-var points = 0
+var points = 40
 
 func add_point(value:int):
 	points += value
