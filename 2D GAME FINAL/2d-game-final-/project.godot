@@ -23,6 +23,7 @@ window/stretch/mode="canvas_items"
 
 player="player group used for collisions"
 knight="knight group used for collisions"
+level=""
 
 [input]
 

@@ -1219,14 +1219,14 @@ label_settings = SubResource("LabelSettings_g81fi")
 offset_left = 1039.0
 offset_top = 154.0
 offset_right = 1715.0
-offset_bottom = 288.0
+offset_bottom = 635.0
 color = Color(0.176471, 0.168627, 0.32549, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = 2386.0
 offset_top = 154.0
 offset_right = 3458.0
-offset_bottom = 288.0
+offset_bottom = 561.0
 color = Color(0.176471, 0.168627, 0.32549, 1)
 
 [node name="Killbox" type="Area2D" parent="."]

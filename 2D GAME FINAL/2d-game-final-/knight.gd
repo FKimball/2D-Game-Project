@@ -14,6 +14,7 @@ var can_move: bool = true
 func _ready():
 	target = point_b  # Start moving towards point_b first
 	animated_sprite.play("run")  # Start walking animation
+	print(global_position)
 
 func _physics_process(delta):
 	if not can_move:
