@@ -974,9 +974,7 @@ scale = Vector2(1.02885, 1)
 texture = ExtResource("6_xrq3n")
 
 [node name="Archer" parent="." groups=["player"] instance=ExtResource("13_yjy8c")]
-scale = Vector2(0.65, 0.65)
-
-[node name="Camera2D" type="Camera2D" parent="Archer"]
+scale = Vector2(1, 1)
 
 [node name="Knight1" parent="." groups=["knight"] instance=ExtResource("7_ocds1")]
 position = Vector2(2793, 65)

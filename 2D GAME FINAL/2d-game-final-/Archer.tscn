@@ -182,4 +182,6 @@ position = Vector2(0.666667, 3.33333)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CapsuleShape2D_kxjta")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [connection signal="tree_entered" from="CollisionShape2D" to="." method="_on_collision_shape_2d_tree_entered"]
