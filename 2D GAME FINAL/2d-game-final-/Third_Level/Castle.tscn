@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=4 uid="uid://vs2sphh323q0"]
+[gd_scene load_steps=26 format=4 uid="uid://vs2sphh323q0"]
 
 [ext_resource type="Texture2D" uid="uid://c4egx540hl1qx" path="res://Third_Level/Assets/Terrain/Terrain (16x16).png" id="1_2re5d"]
 [ext_resource type="Texture2D" uid="uid://c58kjdpslxjlu" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/Version C/layers/sky.png" id="1_5142h"]
+[ext_resource type="Script" path="res://Third_Level/castle.gd" id="1_nj7el"]
 [ext_resource type="Texture2D" uid="uid://c38xrrsl80jls" path="res://Third_Level/Assets/castle_tileset.png" id="1_u4qef"]
 [ext_resource type="Texture2D" uid="uid://binb2wpfjlx5l" path="res://Third_Level/Assets/Outdoors_Tileset/midground_/autumn_.png" id="2_4vfig"]
 [ext_resource type="Texture2D" uid="uid://p3damftjidc3" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/Version C/layers/far-mountains.png" id="2_d0tj2"]
@@ -1276,17 +1277,34 @@ sources/5 = SubResource("TileSetAtlasSource_fp738")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gr8gi"]
 size = Vector2(4199.33, 76.5)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" groups=["level"]]
 scale = Vector2(0.75, 0.75)
+script = ExtResource("1_nj7el")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+texture_filter = 1
+offset_right = 70.0
+offset_bottom = 22.0
+
+[node name="Label" type="Label" parent="UI/Panel"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_right = 67.0
+offset_bottom = 23.0
+text = "Coins: 40"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1010, 102)
-scale = Vector2(150.188, 3.4)
+position = Vector2(-566.504, 102)
+scale = Vector2(177.906, 3.4)
 texture = ExtResource("1_5142h")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
 texture_filter = 1
-position = Vector2(12.1021, 43.0476)
+position = Vector2(-35.7906, 43.0476)
+scale = Vector2(0.539494, 1)
 texture = ExtResource("2_d0tj2")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
@@ -1313,121 +1331,119 @@ tile_map_data = PackedByteArray("AAA4AAQABAAMAAQAAAA5AAUABAAMAAQAAAA5AAQABAANAAQ
 tile_set = SubResource("TileSet_ypg5a")
 
 [node name="Archer" parent="." groups=["player"] instance=ExtResource("2_kaowm")]
-position = Vector2(1032, 41.3333)
+position = Vector2(1024, 41.3333)
 scale = Vector2(0.75, 0.75)
 spawn_point = Vector2(765, 32)
 
 [node name="Camera2D" type="Camera2D" parent="Archer"]
-zoom = Vector2(3, 3)
+zoom = Vector2(1.5, 1.5)
 
 [node name="scoin1" parent="." instance=ExtResource("14_yri6u")]
 position = Vector2(273, 164)
-coin_value = 1
 
 [node name="scoin2" parent="." instance=ExtResource("14_yri6u")]
 position = Vector2(568, 76)
 frame_progress = 0.340678
-coin_value = 1
 
 [node name="scoin3" parent="." instance=ExtResource("14_yri6u")]
 position = Vector2(-1215, 343)
 frame_progress = 0.340678
-coin_value = 1
 
 [node name="scoin4" parent="." instance=ExtResource("14_yri6u")]
 position = Vector2(-791, 286)
 frame_progress = 0.340678
-coin_value = 1
 
 [node name="scoin5" parent="." instance=ExtResource("14_yri6u")]
 position = Vector2(-443, 228)
 frame_progress = 0.340678
-coin_value = 1
 
 [node name="coin1" parent="." instance=ExtResource("3_y750j")]
 position = Vector2(905, 352)
 script = ExtResource("15_2yn8i")
-coin_value = 1
 
 [node name="coin2" parent="." instance=ExtResource("3_y750j")]
 position = Vector2(-99, 107)
 frame_progress = 0.139346
-coin_value = 1
 
 [node name="coin3" parent="." instance=ExtResource("3_y750j")]
 position = Vector2(-1442, 338)
 frame_progress = 0.139346
-coin_value = 1
 
 [node name="coin4" parent="." instance=ExtResource("3_y750j")]
 position = Vector2(-1789, 359)
 frame_progress = 0.139346
-coin_value = 1
 
 [node name="coin5" parent="." instance=ExtResource("3_y750j")]
 position = Vector2(-956, 322)
 frame_progress = 0.139346
-coin_value = 1
 
 [node name="knight1" parent="." groups=["knight"] instance=ExtResource("10_ikj41")]
-position = Vector2(752, 348)
+position = Vector2(828, 348)
 scale = Vector2(1.15, 1.15)
-point_a = Vector2(1035, 350)
-point_b = Vector2(756, 350)
+point_a = Vector2(600, 348)
+point_b = Vector2(775, 348)
 spawn_point = Vector2(765, 32)
 
 [node name="knight2" parent="." groups=["knight"] instance=ExtResource("10_ikj41")]
 position = Vector2(526.667, 300)
 scale = Vector2(1.15, 1.15)
-point_a = Vector2(525, 302)
-point_b = Vector2(630, 302)
+point_a = Vector2(465, 300)
+point_b = Vector2(405, 300)
 spawn_point = Vector2(765, 32)
 
 [node name="knight3" parent="." groups=["knight"] instance=ExtResource("10_ikj41")]
-position = Vector2(34.6667, 174.667)
-point_a = Vector2(-207, 174)
+position = Vector2(-209.333, 174.667)
+scale = Vector2(1.15, 1.15)
+point_a = Vector2(-165, 174)
 point_b = Vector2(34, 174)
 spawn_point = Vector2(765, 32)
 
 [node name="knight4" parent="." groups=["knight"] instance=ExtResource("10_ikj41")]
 position = Vector2(-396, 270.667)
-point_a = Vector2(-510, 270)
-point_b = Vector2(-396, 270)
+scale = Vector2(1.15, 1.15)
+point_a = Vector2(-315, 270)
+point_b = Vector2(-400, 270)
 spawn_point = Vector2(765, 32)
 
 [node name="knight5" parent="." groups=["knight"] instance=ExtResource("10_ikj41")]
 position = Vector2(-572, 350.667)
-point_a = Vector2(-689, 350)
-point_b = Vector2(-572, 350)
+scale = Vector2(1.15, 1.15)
+point_a = Vector2(-425, 350)
+point_b = Vector2(-515, 350)
 spawn_point = Vector2(765, 32)
 
 [node name="knight6" parent="." groups=["knight"] instance=ExtResource("10_ikj41")]
 position = Vector2(-894.667, 366.667)
-point_a = Vector2(-1009, 366)
-point_b = Vector2(-894, 366)
+scale = Vector2(1.15, 1.15)
+point_a = Vector2(-775, 366)
+point_b = Vector2(-680, 366)
 spawn_point = Vector2(765, 32)
 
 [node name="knight7" parent="." groups=["knight"] instance=ExtResource("10_ikj41")]
 position = Vector2(-1373.33, 382.667)
-point_a = Vector2(-1532, 382)
-point_b = Vector2(-1373, 382)
+scale = Vector2(1.15, 1.15)
+point_a = Vector2(-1020, 382)
+point_b = Vector2(-1150, 382)
 spawn_point = Vector2(765, 32)
 
 [node name="knight8" parent="." groups=["knight"] instance=ExtResource("10_ikj41")]
 position = Vector2(-1706.67, 398.667)
-point_a = Vector2(-1764, 398)
-point_b = Vector2(-1706, 398)
+scale = Vector2(1.15, 1.15)
+point_a = Vector2(-1275, 398)
+point_b = Vector2(-1350, 398)
 spawn_point = Vector2(765, 32)
 
 [node name="knight9" parent="." groups=["knight"] instance=ExtResource("10_ikj41")]
 position = Vector2(-1872, 398.667)
-point_a = Vector2(-1816, 398)
-point_b = Vector2(-1873, 398)
+scale = Vector2(1.15, 1.15)
+point_a = Vector2(-1360, 398)
+point_b = Vector2(-1420, 398)
 spawn_point = Vector2(765, 32)
 
 [node name="Killbox" type="Area2D" parent="."]
 position = Vector2(-178, 473)
 script = ExtResource("11_yr3ut")
+spawn_point = Vector2(765, 32)
 
 [node name="Kill1collision" type="CollisionShape2D" parent="Killbox"]
 position = Vector2(55.6667, 51)
@@ -1435,8 +1451,8 @@ shape = SubResource("RectangleShape2D_gr8gi")
 debug_color = Color(0.0281714, 0.615062, 0.597918, 0.42)
 
 [node name="ColorRect" type="ColorRect" parent="Killbox"]
-offset_left = -2998.0
-offset_top = 21.6667
-offset_right = 1627.0
-offset_bottom = 1647.67
+offset_left = -2995.33
+offset_top = 0.333326
+offset_right = 1629.67
+offset_bottom = 1626.34
 color = Color(0, 0, 0, 0.921569)

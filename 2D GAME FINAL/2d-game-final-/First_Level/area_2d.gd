@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var spawn_point: Vector2 = Vector2(0, 0)  # Set the spawn point directly in the export variable
+@export var spawn_point: Vector2  # Set the spawn point directly in the export variable
 
 @onready var player: Node2D = get_node("/root/Scene/Player")  # Adjust path to the player node
 
