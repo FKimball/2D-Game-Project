@@ -31,7 +31,7 @@ func _ready() -> void:
 		
 func _process(_delta: float) -> void: 
 	if in_workbench == true:
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_up"):
 			get_tree().change_scene_to_file("res://Fourth_Level/coindropper.tscn")
 	
 	var direction := Input.get_axis("ui_left", "ui_right")
