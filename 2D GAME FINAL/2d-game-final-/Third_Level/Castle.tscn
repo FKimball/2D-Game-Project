@@ -1350,6 +1350,9 @@ position = Vector2(1020, 42)
 scale = Vector2(0.75, 0.75)
 spawn_point = Vector2(1030, 35)
 
+[node name="Camera2D" type="Camera2D" parent="Archer"]
+zoom = Vector2(1.5, 1.5)
+
 [node name="scoin1" parent="." instance=ExtResource("14_yri6u")]
 position = Vector2(273, 164)
 

@@ -1,6 +1,7 @@
 extends RigidBody2D
 
-@export var speed = 1.1
+@export var speed_global = 1.1
+var speed = speed_global
 signal speed_up
 signal no_speed_up
 signal full_pouch

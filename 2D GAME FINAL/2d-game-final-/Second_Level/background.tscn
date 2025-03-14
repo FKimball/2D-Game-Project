@@ -483,6 +483,7 @@ offset_bottom = 25.0
 
 [node name="Label" type="Label" parent="UI/Panel"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = -1.0
 offset_top = 1.0
 offset_right = 72.0
@@ -495,35 +496,27 @@ position = Vector2(512, 378)
 
 [node name="Coin" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(687, 465)
-scale = Vector2(1, 1)
 
 [node name="Node2D4" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(880, 221)
-scale = Vector2(1, 1)
 
 [node name="Node2D3" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(1058, 317)
-scale = Vector2(1, 1)
 
 [node name="Coin3" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(896, 401)
-scale = Vector2(1, 1)
 
 [node name="Node2D5" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(701, 157)
-scale = Vector2(1, 1)
 
 [node name="Node2D6" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(478, 127)
-scale = Vector2(1, 1)
 
 [node name="Node2D7" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(274, 223)
-scale = Vector2(1, 1)
 
 [node name="Next Level" type="Node2D" parent="."]
 position = Vector2(27.6315, 32.4504)
-scale = Vector2(1, 1)
 script = ExtResource("7_psr63")
 scene_to_load = ExtResource("8_s6os5")
 

@@ -976,6 +976,10 @@ texture = ExtResource("6_xrq3n")
 [node name="Archer" parent="." groups=["player"] instance=ExtResource("13_yjy8c")]
 scale = Vector2(0.65, 0.65)
 
+[node name="Camera2D" type="Camera2D" parent="Archer"]
+scale = Vector2(1.53846, 1.53846)
+zoom = Vector2(2, 2)
+
 [node name="Knight1" parent="." groups=["knight"] instance=ExtResource("7_ocds1")]
 position = Vector2(2793, 65)
 up_direction = Vector2(0.894427, -0.447214)
