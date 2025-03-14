@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bt6m7wiuqqy3n"]
+[gd_scene load_steps=11 format=3 uid="uid://bt6m7wiuqqy3n"]
 
 [ext_resource type="PackedScene" uid="uid://bfojjnkgjrjqr" path="res://Fourth_Level/archer.tscn" id="2_dy1i0"]
 [ext_resource type="Texture2D" uid="uid://cgvgvw4gc4qo" path="res://Fourth_Level/Assets/Workbench.webp" id="3_2ib4s"]
-[ext_resource type="Texture2D" uid="uid://dfhpr2rgs24rd" path="res://Fourth_Level/Assets/Screenshot 2025-03-13 224850.png" id="3_vwp1t"]
 [ext_resource type="Texture2D" uid="uid://djxd7s7wnnaxi" path="res://Fourth_Level/Assets/chimney.png" id="4_mybem"]
 [ext_resource type="Texture2D" uid="uid://b5hyij6pfwpm2" path="res://Fourth_Level/Assets/main_wood_bg.png" id="5_bs2xx"]
 [ext_resource type="Texture2D" uid="uid://bbhaajkrt3btf" path="res://Fourth_Level/Assets/closed_door.png" id="6_mi8nj"]
@@ -116,22 +115,22 @@ shape = SubResource("RectangleShape2D_axnuq")
 z_index = -25
 position = Vector2(164, 300)
 scale = Vector2(0.748725, 1.32525)
-texture = ExtResource("3_vwp1t")
+texture = ExtResource("5_bs2xx")
 
 [node name="Screenshot2025-03-13224850" type="Sprite2D" parent="Screenshot2025-03-13224850"]
 position = Vector2(368.376, 1.13245)
 scale = Vector2(0.905878, 0.993434)
-texture = ExtResource("3_vwp1t")
+texture = ExtResource("5_bs2xx")
 
 [node name="Screenshot2025-03-13224850" type="Sprite2D" parent="Screenshot2025-03-13224850/Screenshot2025-03-13224850"]
 position = Vector2(371.874, -4.05304)
 scale = Vector2(0.990785, 0.993434)
-texture = ExtResource("3_vwp1t")
+texture = ExtResource("5_bs2xx")
 
 [node name="Screenshot2025-03-13224850" type="Sprite2D" parent="Screenshot2025-03-13224850/Screenshot2025-03-13224850/Screenshot2025-03-13224850"]
 position = Vector2(383.498, 0.892461)
 scale = Vector2(1.05343, 0.993434)
-texture = ExtResource("3_vwp1t")
+texture = ExtResource("5_bs2xx")
 
 [node name="Chimney" type="Sprite2D" parent="."]
 z_index = -1
