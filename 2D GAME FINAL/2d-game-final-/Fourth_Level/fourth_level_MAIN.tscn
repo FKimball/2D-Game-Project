@@ -1,0 +1,107 @@
+[gd_scene load_steps=8 format=3 uid="uid://bt6m7wiuqqy3n"]
+
+[ext_resource type="PackedScene" uid="uid://bfojjnkgjrjqr" path="res://Fourth_Level/archer.tscn" id="1_lanvy"]
+[ext_resource type="Texture2D" uid="uid://cgvgvw4gc4qo" path="res://Fourth_Level/Assets/Workbench.webp" id="2_6dw7g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7r5m"]
+size = Vector2(42.5, 484.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ee6u8"]
+size = Vector2(1744, 51.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kumsh"]
+font_color = Color(4.86121e-06, 0.802246, 0.400713, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rds8d"]
+size = Vector2(144, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_axnuq"]
+size = Vector2(67, 143)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="wall" type="ColorRect" parent="."]
+offset_left = 1058.0
+offset_top = 125.0
+offset_right = 1102.0
+offset_bottom = 445.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="wall"]
+position = Vector2(25, 333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall/StaticBody2D"]
+position = Vector2(-3.25, -89.875)
+shape = SubResource("RectangleShape2D_t7r5m")
+
+[node name="Floor" type="ColorRect" parent="."]
+offset_left = -3.0
+offset_top = 609.0
+offset_right = 1718.0
+offset_bottom = 649.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D"]
+position = Vector2(866, 24.25)
+shape = SubResource("RectangleShape2D_ee6u8")
+
+[node name="Icon" parent="." instance=ExtResource("1_lanvy")]
+position = Vector2(370, 448)
+
+[node name="Label" type="Label" parent="Icon"]
+visible = false
+offset_left = 59.0769
+offset_top = -94.1609
+offset_right = 318.077
+offset_bottom = 58.8391
+text = "_____________________________________
+|  I should make some pouches  |
+|  in the workbench to easily       |
+|  redistribute all the gold...         |
+|_____  ____________________________ |
+          V"
+label_settings = SubResource("LabelSettings_kumsh")
+
+[node name="Workbench" type="Sprite2D" parent="."]
+z_index = -7
+position = Vector2(745.75, 564.75)
+scale = Vector2(0.371094, 0.310764)
+texture = ExtResource("2_6dw7g")
+
+[node name="Area2D" type="Area2D" parent="Workbench"]
+position = Vector2(-163.705, -218.011)
+scale = Vector2(2.69474, 3.21788)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Workbench/Area2D"]
+position = Vector2(62.9998, 61.0001)
+shape = SubResource("RectangleShape2D_rds8d")
+debug_color = Color(0.407579, 0.785746, 0.955869, 0.42)
+
+[node name="wall2" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_left = -23.936
+anchor_top = -0.391
+anchor_right = -23.936
+anchor_bottom = -0.391
+offset_left = -5.0
+offset_top = 132.0
+offset_right = 37.0
+offset_bottom = 608.0
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="wall2"]
+position = Vector2(4, -7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2/StaticBody2D2"]
+position = Vector2(15, 241)
+shape = SubResource("RectangleShape2D_t7r5m")
+
+[node name="Hint" type="Area2D" parent="."]
+position = Vector2(991, 473)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hint"]
+position = Vector2(29.5, 60)
+shape = SubResource("RectangleShape2D_axnuq")
+
+[connection signal="body_shape_entered" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_entered"]
+[connection signal="body_shape_exited" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_exited"]
+[connection signal="body_entered" from="Hint" to="Icon" method="_on_area_2d_body_entered"]
