@@ -24,6 +24,8 @@ func _ready() -> void:
 	$"../MakePouch".visible = false
 	$"../WinButton".visible = false
 	$"../ResetButton".visible = false
+	score = Globals.coins
+	$"../Label".text = "Coins Left " + str(score) + "/" + str(Globals.coins)
 	
 var queue_teleport: Vector2 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void: #FUNCTION TO AVOID SNAP-BACK BUG. SOURCE: https://forum.godotengine.org/t/when-changing-the-position-of-my-object-it-teleports-back-to-where-it-was-before-for-no-reason/78354/7
