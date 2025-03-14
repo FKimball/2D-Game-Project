@@ -1,9 +1,12 @@
-extends Node2D
+extends AnimatedSprite2D
 
-@onready var points_label: Label = %Label 
-var points = 0
+@export var coin_value: int = 1
+@onready var level = get_tree().get_first_node_in_group("level")
 
-func add_point(value:int):
-	points += value
-	$AudioStreamPlayer2D.play()
-	points_label.text = "Coins: " + str(points)
+func _ready() -> void:
+	play("spin")         # Play the "spin" animation
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		level.add_point(coin_value)
+		queue_free()

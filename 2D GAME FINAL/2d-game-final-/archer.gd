@@ -8,7 +8,6 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 func _ready():
-	spawn_point = Vector2(1016, 44) 
 	global_position = spawn_point
 	print("Hello")
 

@@ -11,9 +11,22 @@ config_version=5
 [application]
 
 config/name="2D Game FINAL"
+<<<<<<< HEAD
 run/main_scene="res://Second_Level/background.tscn"
+=======
+run/main_scene="res://First_Level/Main Menu.tscn"
+>>>>>>> 40cb5d7c0ba1050beb150ae38d4fd30ffa88b9d4
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[global_group]
+
+player="player group used for collisions"
+knight="knight group used for collisions"
 
 [input]
 
