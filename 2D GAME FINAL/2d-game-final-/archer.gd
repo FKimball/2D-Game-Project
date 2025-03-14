@@ -5,7 +5,7 @@ extends CharacterBody2D
 @onready var sound = $AudioStreamPlayer2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -500.0
 
 func _ready():
 	global_position = spawn_point
