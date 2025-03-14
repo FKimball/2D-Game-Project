@@ -32,7 +32,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void: 
 	if in_workbench == true:
 		if Input.is_action_just_pressed("ui_accept"):
-			get_tree().change_scene_to_file("res://coindropper.tscn")
+			get_tree().change_scene_to_file("res://Fourth_Level/coindropper.tscn")
 	
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
@@ -60,3 +60,7 @@ func _on_area_2d_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index
 
 func _on_timer_timeout() -> void:
 	is_jumping = false # Replace with function body.
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	$Label.visible = true # Replace with function body.

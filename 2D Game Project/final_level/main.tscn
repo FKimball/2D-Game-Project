@@ -39,11 +39,11 @@ scale = Vector2(0.371094, 0.310764)
 texture = ExtResource("2_43pt5")
 
 [node name="Area2D" type="Area2D" parent="Workbench"]
-position = Vector2(-163.705, -465.788)
+position = Vector2(-47.8315, -179.397)
 scale = Vector2(2.69474, 3.21788)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Workbench/Area2D"]
-position = Vector2(62, 141)
+position = Vector2(20, 47.9999)
 shape = SubResource("RectangleShape2D_rds8d")
 debug_color = Color(0.407579, 0.785746, 0.955869, 0.42)
 

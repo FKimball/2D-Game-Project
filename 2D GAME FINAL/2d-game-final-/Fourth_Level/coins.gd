@@ -76,7 +76,7 @@ func _process(_delta: float) -> void:
 		visible = false
 
 func _on_win_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://Fourth_Level/fourth_level_post.tscn")
 
 
 func _on_reset_button_pressed() -> void:

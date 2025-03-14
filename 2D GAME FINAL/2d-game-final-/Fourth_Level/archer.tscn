@@ -1,8 +1,8 @@
 [gd_scene load_steps=26 format=3 uid="uid://bfojjnkgjrjqr"]
 
-[ext_resource type="Script" path="res://icon.gd" id="1_gkech"]
-[ext_resource type="Texture2D" uid="uid://cpketyo8lonhr" path="res://Assets/Archer/Idle and running.png" id="2_wtqht"]
-[ext_resource type="Texture2D" uid="uid://btxnbxpbggxfu" path="res://Assets/Archer/Jumping.png" id="3_w8e2v"]
+[ext_resource type="Script" path="res://Fourth_Level/icon.gd" id="1_gkech"]
+[ext_resource type="Texture2D" uid="uid://cpketyo8lonhr" path="res://Fourth_Level/Assets/Archer/Idle and running.png" id="2_wtqht"]
+[ext_resource type="Texture2D" uid="uid://btxnbxpbggxfu" path="res://Fourth_Level/Assets/Archer/Jumping.png" id="3_w8e2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cyy02"]
 size = Vector2(56.0001, 119)
