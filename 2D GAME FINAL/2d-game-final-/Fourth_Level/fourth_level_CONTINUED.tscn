@@ -1,14 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://bt6m7wiuqqy3n"]
+[gd_scene load_steps=15 format=3 uid="uid://b2edudc871712"]
 
-[ext_resource type="PackedScene" uid="uid://bfojjnkgjrjqr" path="res://Fourth_Level/archer.tscn" id="2_dy1i0"]
-[ext_resource type="Texture2D" uid="uid://cgvgvw4gc4qo" path="res://Fourth_Level/Assets/Workbench.webp" id="3_2ib4s"]
-[ext_resource type="Texture2D" uid="uid://dfhpr2rgs24rd" path="res://Fourth_Level/Assets/Screenshot 2025-03-13 224850.png" id="3_vwp1t"]
-[ext_resource type="Texture2D" uid="uid://djxd7s7wnnaxi" path="res://Fourth_Level/Assets/chimney.png" id="4_mybem"]
-[ext_resource type="Texture2D" uid="uid://b5hyij6pfwpm2" path="res://Fourth_Level/Assets/main_wood_bg.png" id="5_bs2xx"]
-[ext_resource type="Texture2D" uid="uid://bbhaajkrt3btf" path="res://Fourth_Level/Assets/closed_door.png" id="6_mi8nj"]
+[ext_resource type="PackedScene" uid="uid://bfojjnkgjrjqr" path="res://Fourth_Level/archer.tscn" id="1_dsgfa"]
+[ext_resource type="Texture2D" uid="uid://cgvgvw4gc4qo" path="res://Fourth_Level/Assets/Workbench.webp" id="2_igqu6"]
+[ext_resource type="Texture2D" uid="uid://dfhpr2rgs24rd" path="res://Fourth_Level/Assets/Screenshot 2025-03-13 224850.png" id="3_mewfl"]
+[ext_resource type="Texture2D" uid="uid://djxd7s7wnnaxi" path="res://Fourth_Level/Assets/chimney.png" id="4_viiws"]
+[ext_resource type="Texture2D" uid="uid://b5hyij6pfwpm2" path="res://Fourth_Level/Assets/main_wood_bg.png" id="5_44pw2"]
+[ext_resource type="Texture2D" uid="uid://dsbrmnual7dt5" path="res://Fourth_Level/Assets/lpc-doors-animated-1.png" id="6_hsymc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7r5m"]
-size = Vector2(30.25, 709.125)
+size = Vector2(23.375, 572.438)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ee6u8"]
 size = Vector2(1135, 51)
@@ -16,18 +16,48 @@ size = Vector2(1135, 51)
 [sub_resource type="LabelSettings" id="LabelSettings_kumsh"]
 font_color = Color(4.86121e-06, 0.802246, 0.400713, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rds8d"]
-size = Vector2(144, 92)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyx2q"]
+atlas = ExtResource("6_hsymc")
+region = Rect2(0, 476, 76, 68)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_axnuq"]
-size = Vector2(67, 143)
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0uyr"]
+atlas = ExtResource("6_hsymc")
+region = Rect2(0, 408, 76, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e6o7"]
+atlas = ExtResource("6_hsymc")
+region = Rect2(0, 340, 76, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyrr2"]
+atlas = ExtResource("6_hsymc")
+region = Rect2(0, 272, 76, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7catk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyx2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0uyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4e6o7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyrr2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="wall" type="ColorRect" parent="."]
-offset_left = 1087.0
+offset_left = 1092.0
 offset_top = -15.0
-offset_right = 1102.0
+offset_right = 1122.0
 offset_bottom = 445.0
 color = Color(0.4, 0.258824, 0.176471, 1)
 
@@ -35,7 +65,7 @@ color = Color(0.4, 0.258824, 0.176471, 1)
 position = Vector2(25, 333)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall/StaticBody2D"]
-position = Vector2(-3.25, -89.875)
+position = Vector2(-6.6875, -158.219)
 shape = SubResource("RectangleShape2D_t7r5m")
 
 [node name="Floor" type="ColorRect" parent="."]
@@ -51,9 +81,9 @@ color = Color(0.336846, 0.166481, 0.0858184, 1)
 position = Vector2(560.5, 25.5)
 shape = SubResource("RectangleShape2D_ee6u8")
 
-[node name="Icon" parent="." instance=ExtResource("2_dy1i0")]
+[node name="Icon" parent="." instance=ExtResource("1_dsgfa")]
 z_index = 14
-position = Vector2(370, 451)
+position = Vector2(675, 451)
 
 [node name="Label" type="Label" parent="Icon"]
 visible = false
@@ -73,16 +103,7 @@ label_settings = SubResource("LabelSettings_kumsh")
 z_index = -7
 position = Vector2(745.75, 564.75)
 scale = Vector2(0.371094, 0.310764)
-texture = ExtResource("3_2ib4s")
-
-[node name="Area2D" type="Area2D" parent="Workbench"]
-position = Vector2(-163.705, -218.011)
-scale = Vector2(2.69474, 3.21788)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Workbench/Area2D"]
-position = Vector2(62.9998, 61.0001)
-shape = SubResource("RectangleShape2D_rds8d")
-debug_color = Color(0.407579, 0.785746, 0.955869, 0.42)
+texture = ExtResource("2_igqu6")
 
 [node name="wall2" type="ColorRect" parent="."]
 anchors_preset = -1
@@ -103,55 +124,47 @@ position = Vector2(4, -7)
 position = Vector2(8.875, 353.438)
 shape = SubResource("RectangleShape2D_t7r5m")
 
-[node name="Hint" type="Area2D" parent="."]
-position = Vector2(991, 473)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hint"]
-position = Vector2(29.5, 60)
-shape = SubResource("RectangleShape2D_axnuq")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="Screenshot2025-03-13224850" type="Sprite2D" parent="."]
 z_index = -25
 position = Vector2(164, 300)
 scale = Vector2(0.748725, 1.32525)
-texture = ExtResource("3_vwp1t")
+texture = ExtResource("3_mewfl")
 
 [node name="Screenshot2025-03-13224850" type="Sprite2D" parent="Screenshot2025-03-13224850"]
 position = Vector2(368.376, 1.13245)
 scale = Vector2(0.905878, 0.993434)
-texture = ExtResource("3_vwp1t")
+texture = ExtResource("3_mewfl")
 
 [node name="Screenshot2025-03-13224850" type="Sprite2D" parent="Screenshot2025-03-13224850/Screenshot2025-03-13224850"]
 position = Vector2(371.874, -4.05304)
 scale = Vector2(0.990785, 0.993434)
-texture = ExtResource("3_vwp1t")
+texture = ExtResource("3_mewfl")
 
 [node name="Screenshot2025-03-13224850" type="Sprite2D" parent="Screenshot2025-03-13224850/Screenshot2025-03-13224850/Screenshot2025-03-13224850"]
-position = Vector2(383.498, 0.892461)
-scale = Vector2(1.05343, 0.993434)
-texture = ExtResource("3_vwp1t")
+position = Vector2(398.751, 0.892461)
+scale = Vector2(1.13125, 0.993434)
+texture = ExtResource("3_mewfl")
 
 [node name="Chimney" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(204, 543)
 scale = Vector2(1, 1.00781)
-texture = ExtResource("4_mybem")
+texture = ExtResource("4_viiws")
 
 [node name="PointLight2D" type="PointLight2D" parent="Chimney"]
 position = Vector2(349.194, -190.382)
 scale = Vector2(1.99791, 0.863006)
 energy = 0.6
 range_z_max = 10
-texture = ExtResource("5_bs2xx")
+texture = ExtResource("5_44pw2")
 texture_scale = 1.45
 
-[node name="ClosedDoor" type="Sprite2D" parent="."]
-position = Vector2(1097.25, 521.375)
-scale = Vector2(3.55357, 2.54851)
-texture = ExtResource("6_mi8nj")
-
-[connection signal="body_shape_entered" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_entered"]
-[connection signal="body_shape_exited" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_exited"]
-[connection signal="body_entered" from="Hint" to="Icon" method="_on_area_2d_body_entered"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1097, 507)
+scale = Vector2(1.30921, 3.47794)
+sprite_frames = SubResource("SpriteFrames_7catk")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0

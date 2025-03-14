@@ -95,8 +95,8 @@ region_rect = Rect2(-0.178406, 0.214779, 18.5805, 17.3913)
 shape = SubResource("RectangleShape2D_slih5")
 
 [node name="Pouch" type="AnimatedSprite2D" parent="."]
-position = Vector2(558.75, 566.313)
-scale = Vector2(1.46795, 2.26786)
+position = Vector2(568.75, 552.313)
+scale = Vector2(1.72436, 2.6315)
 sprite_frames = SubResource("SpriteFrames_u84j2")
 animation = &"become_full"
 script = ExtResource("5_k2hqk")
@@ -107,6 +107,10 @@ position = Vector2(-2.42236, 11.3818)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pouch/Area2D"]
 position = Vector2(-0.023407, -11.605)
 shape = SubResource("RectangleShape2D_tj3bh")
+
+[node name="smaller_pouch" type="Timer" parent="Pouch"]
+wait_time = 0.9
+one_shot = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.2
@@ -172,6 +176,7 @@ TRY AGAIN"
 [connection signal="winpouch" from="Coin" to="Pouch" method="_on_coin_winpouch"]
 [connection signal="dontplaysfx" from="Pouch" to="SucessCoin" method="_on_pouch_dontplaysfx"]
 [connection signal="body_entered" from="Pouch/Area2D" to="Coin" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Pouch/smaller_pouch" to="Coin" method="_on_smaller_pouch_timeout"]
 [connection signal="timeout" from="Timer" to="Coin" method="_on_timer_timeout"]
 [connection signal="pressed" from="MakePouch" to="Coin" method="_on_make_pouch_pressed"]
 [connection signal="timeout" from="SucessCoin/SoundTimer" to="SucessCoin" method="_on_sound_timer_timeout"]

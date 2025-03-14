@@ -76,7 +76,7 @@ func _process(_delta: float) -> void:
 		visible = false
 
 func _on_win_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Fourth_Level/fourth_level_post.tscn")
+	get_tree().change_scene_to_file("res://Fourth_Level/fourth_level_CONTINUED.tscn")
 
 
 func _on_reset_button_pressed() -> void:
@@ -123,3 +123,8 @@ func _on_make_pouch_pressed() -> void:
 	button_visible = false
 	$"../MakePouch".visible = false
 	is_dropping = false # Replace with function body.
+	$"../Pouch/smaller_pouch".start()
+
+func _on_smaller_pouch_timeout() -> void:
+	$"../Pouch".scale.x -= 0.25
+	$"../Pouch".scale.y -= 0.25 # Replace with function body.
