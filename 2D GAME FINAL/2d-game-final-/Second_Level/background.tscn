@@ -575,6 +575,7 @@ tile_set = SubResource("TileSet_fgbnt")
 
 [node name="Node2D" parent="." instance=ExtResource("2_wsr4t")]
 position = Vector2(45, 612)
+spawn_point = Vector2(45, 612)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
