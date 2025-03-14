@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-@export var speed_global = 1.1
+@export var speed_global = 100
 var speed = speed_global
 signal speed_up
 signal no_speed_up
@@ -40,15 +40,16 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void: #FUNCTION TO AV
 func _process(_delta: float) -> void:
 	$"../Label".text = "Coins Left: " + str(score) + "/50"
 	$"../Label2".text = "Pouches Made: " + str(pouches_done) + "/5"
-	position.x += speed
+	position.x += speed*_delta
 	if position.x >= 794:
 		speed = speed*-1
 	elif position.x <= 244:
 		speed = speed*-1
-
+	score = 10
+	print(Engine.get_frames_per_second())
 	
 	if score > 0:
-		if (Input.is_action_just_pressed("DropCoin") && is_dropping == false) :
+		if (Input.is_action_just_pressed("DropCoin") && is_dropping == false):
 			score -= 1
 			speed = 0
 			freeze = false

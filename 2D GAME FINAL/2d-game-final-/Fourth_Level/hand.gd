@@ -1,14 +1,15 @@
 extends Sprite2D
 
-@export var speed = 1.1
+@export var global_speed = 100
+var speed = global_speed
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready() -> void: 
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	position.x += speed
+	position.x += speed*_delta
 	if position.x >= 826:
 		speed = speed*-1
 	elif position.x <= 276:
