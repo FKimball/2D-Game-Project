@@ -1,11 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://b2edudc871712"]
+[gd_scene load_steps=18 format=3 uid="uid://b2edudc871712"]
 
 [ext_resource type="PackedScene" uid="uid://bfojjnkgjrjqr" path="res://Fourth_Level/archer.tscn" id="1_dsgfa"]
 [ext_resource type="Texture2D" uid="uid://cgvgvw4gc4qo" path="res://Fourth_Level/Assets/Workbench.webp" id="2_igqu6"]
-[ext_resource type="Texture2D" uid="uid://dfhpr2rgs24rd" path="res://Fourth_Level/Assets/Screenshot 2025-03-13 224850.png" id="3_mewfl"]
 [ext_resource type="Texture2D" uid="uid://djxd7s7wnnaxi" path="res://Fourth_Level/Assets/chimney.png" id="4_viiws"]
 [ext_resource type="Texture2D" uid="uid://b5hyij6pfwpm2" path="res://Fourth_Level/Assets/main_wood_bg.png" id="5_44pw2"]
 [ext_resource type="Texture2D" uid="uid://dsbrmnual7dt5" path="res://Fourth_Level/Assets/lpc-doors-animated-1.png" id="6_hsymc"]
+[ext_resource type="Texture2D" uid="uid://cayrhbvmp8l7q" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/version A/Layers/sky.png" id="6_uaigi"]
+[ext_resource type="Texture2D" uid="uid://8b3qp2gjw5fo" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/version A/Layers/far-mountains.png" id="7_ytswa"]
+[ext_resource type="Texture2D" uid="uid://ctwjym18x8gdb" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/version A/Layers/trees.png" id="8_cqnmd"]
+[ext_resource type="Texture2D" uid="uid://dm1dxt8tfy3j8" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/version B/Layers/near-trees.png" id="9_jcjjb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7r5m"]
 size = Vector2(23.375, 572.438)
@@ -69,6 +72,7 @@ position = Vector2(-6.6875, -158.219)
 shape = SubResource("RectangleShape2D_t7r5m")
 
 [node name="Floor" type="ColorRect" parent="."]
+z_index = 9
 offset_left = -3.0
 offset_top = 609.0
 offset_right = 1106.0
@@ -130,22 +134,22 @@ shape = SubResource("RectangleShape2D_t7r5m")
 z_index = -25
 position = Vector2(164, 300)
 scale = Vector2(0.748725, 1.32525)
-texture = ExtResource("3_mewfl")
+texture = ExtResource("5_44pw2")
 
 [node name="Screenshot2025-03-13224850" type="Sprite2D" parent="Screenshot2025-03-13224850"]
 position = Vector2(368.376, 1.13245)
 scale = Vector2(0.905878, 0.993434)
-texture = ExtResource("3_mewfl")
+texture = ExtResource("5_44pw2")
 
 [node name="Screenshot2025-03-13224850" type="Sprite2D" parent="Screenshot2025-03-13224850/Screenshot2025-03-13224850"]
 position = Vector2(371.874, -4.05304)
 scale = Vector2(0.990785, 0.993434)
-texture = ExtResource("3_mewfl")
+texture = ExtResource("5_44pw2")
 
 [node name="Screenshot2025-03-13224850" type="Sprite2D" parent="Screenshot2025-03-13224850/Screenshot2025-03-13224850/Screenshot2025-03-13224850"]
 position = Vector2(398.751, 0.892461)
 scale = Vector2(1.13125, 0.993434)
-texture = ExtResource("3_mewfl")
+texture = ExtResource("5_44pw2")
 
 [node name="Chimney" type="Sprite2D" parent="."]
 z_index = -1
@@ -168,3 +172,27 @@ sprite_frames = SubResource("SpriteFrames_7catk")
 autoplay = "default"
 frame = 3
 frame_progress = 1.0
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -34
+texture_filter = 1
+position = Vector2(567, -246)
+scale = Vector2(4.82016, 7.40068)
+texture = ExtResource("6_uaigi")
+
+[node name="Mountains" type="Sprite2D" parent="Background"]
+z_index = 2
+texture_filter = 1
+position = Vector2(-6.6388, -1.89172)
+scale = Vector2(1.96254, 1)
+texture = ExtResource("7_ytswa")
+
+[node name="Trees" type="Sprite2D" parent="Background/Mountains"]
+position = Vector2(3.25465, 0.614484)
+scale = Vector2(1.02654, 1)
+texture = ExtResource("8_cqnmd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Mountains/Trees"]
+position = Vector2(-0.557775, 0)
+scale = Vector2(0.773546, 1)
+texture = ExtResource("9_jcjjb")
