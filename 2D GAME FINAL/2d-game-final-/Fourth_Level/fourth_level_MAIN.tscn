@@ -18,6 +18,10 @@ size = Vector2(1135, 51)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kumsh"]
 font_color = Color(4.86121e-06, 0.802246, 0.400713, 1)
+outline_size = 1
+outline_color = Color(0.0837009, 0.383142, 0.272845, 1)
+shadow_size = 12
+shadow_color = Color(0, 0.243137, 0, 0.427451)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rds8d"]
 size = Vector2(144, 92)
@@ -42,7 +46,7 @@ position = Vector2(-3.25, -89.875)
 shape = SubResource("RectangleShape2D_t7r5m")
 
 [node name="Floor" type="ColorRect" parent="."]
-z_index = 40
+z_index = 10
 offset_left = -3.0
 offset_top = 609.0
 offset_right = 1106.0
@@ -69,6 +73,7 @@ text = "_____________________________________
 |  I should make some pouches  |
 |  in the workbench to easily       |
 |  redistribute all the gold...         |
+|  (Press up/jump to interact)      |
 |_____  ____________________________ |
           V"
 label_settings = SubResource("LabelSettings_kumsh")

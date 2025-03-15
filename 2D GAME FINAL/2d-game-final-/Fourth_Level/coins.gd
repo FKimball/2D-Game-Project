@@ -38,15 +38,13 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void: #FUNCTION TO AV
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	$"../Label".text = "Coins Left: " + str(score) + "/50"
+	$"../Label".text = "Coins Left: " + str(score) + "/" + str(Globals.coins)
 	$"../Label2".text = "Pouches Made: " + str(pouches_done) + "/5"
 	position.x += speed*_delta
 	if position.x >= 794:
 		speed = speed*-1
 	elif position.x <= 244:
 		speed = speed*-1
-	score = 10
-	print(Engine.get_frames_per_second())
 	
 	if score > 0:
 		if (Input.is_action_just_pressed("DropCoin") && is_dropping == false):
@@ -56,6 +54,7 @@ func _process(_delta: float) -> void:
 			is_dropping = true
 			queue_teleport = Vector2($"../Hand".position.x - 32,replay_position_y)
 			wait_outcome = true
+			$"../Label3".visible = false
 			
 	if (pouch_score_reset == 5):
 		$"../Pouch".play("become_full")

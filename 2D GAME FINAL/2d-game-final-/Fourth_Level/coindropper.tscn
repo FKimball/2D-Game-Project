@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bv7w3gyut4iqi"]
+[gd_scene load_steps=19 format=3 uid="uid://bv7w3gyut4iqi"]
 
 [ext_resource type="Texture2D" uid="uid://die4xb73hlnw7" path="res://Fourth_Level/Assets/Hand.png" id="1_bgbwd"]
 [ext_resource type="Script" path="res://Fourth_Level/hand.gd" id="1_j8bdt"]
@@ -47,6 +47,9 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tj3bh"]
 size = Vector2(63.0283, 76.1225)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vhqf6"]
+font_color = Color(0.0823529, 0.490196, 0.411765, 1)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(1, 0)
@@ -165,6 +168,14 @@ text = "YOU DID NOT MAKE
  ENOUGH COIN POUCHES!
 
 TRY AGAIN"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 349.0
+offset_top = 154.0
+offset_right = 781.0
+offset_bottom = 177.0
+text = "PRESS JUMP OR LEFT CLICK TO START MAKING POUCHES"
+label_settings = SubResource("LabelSettings_vhqf6")
 
 [connection signal="body_entered" from="Area2D Nothing" to="Coin" method="_on_area_2d_nothing_body_entered"]
 [connection signal="full_pouch" from="Coin" to="Pouch" method="_on_coin_full_pouch"]

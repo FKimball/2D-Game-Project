@@ -80,6 +80,7 @@ offset_bottom = 629.0
 color = Color(0.336846, 0.166481, 0.0858184, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Floor"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D"]
 position = Vector2(560.5, 25.5)
@@ -176,8 +177,8 @@ frame_progress = 1.0
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -34
 texture_filter = 1
-position = Vector2(567, -246)
-scale = Vector2(4.82016, 7.40068)
+position = Vector2(566.387, -252.541)
+scale = Vector2(4.81633, 7.34617)
 texture = ExtResource("6_uaigi")
 
 [node name="Mountains" type="Sprite2D" parent="Background"]
