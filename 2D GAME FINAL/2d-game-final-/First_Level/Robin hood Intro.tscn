@@ -1101,10 +1101,9 @@ offset_bottom = 85.0
 show_behind_parent = true
 layout_mode = 2
 text = "The castle terrain is a series of platforms, so you'll 
-need to know how to traverse them. Try it out!
-Use the \"Right\" and \"Left\" keys to move and the 
-space bar to jump. Be careful though, if you fall 
-you'll respawn back a certain area of the level.
+need to know how to traverse them. Use the space 
+bar to jump. Try it out! Be careful though, if you fall 
+you'll respawn back to a certain area of the level.
 "
 label_settings = SubResource("LabelSettings_g81fi")
 
@@ -1130,11 +1129,11 @@ offset_bottom = 34.0
 show_behind_parent = true
 layout_mode = 2
 text = "Awesome! There are two different types 
-of gold coins you're gonna be stealing.
-Gold and Silver. The Gold ones are worth
-5 points, and the Silver ones are worth 3. 
+of  coins you're gonna be stealing.
+Gold and Silver. The gold ones are worth
+5 points, and the silver ones are worth 3. 
 They'll be scattered along the platforms.
-Check em out!"
+Check 'gem out!"
 label_settings = SubResource("LabelSettings_g81fi")
 
 [node name="MarginContainer4" type="MarginContainer" parent="."]
@@ -1158,10 +1157,10 @@ offset_bottom = 66.0
 [node name="Label" type="Label" parent="MarginContainer4/Panel/HBoxContainer"]
 show_behind_parent = true
 layout_mode = 2
-text = "But watch out, there are gonna be knights
-guarding the castle. They'll attack you and
-send you back to the spawn point of the 
-level. So watch out for them."
+text = "There are gonna be knights guarding the 
+castle. They'll attack you and send you
+back to the spawn point of the level. 
+So watch out for them!"
 label_settings = SubResource("LabelSettings_g81fi")
 
 [node name="MarginContainer5" type="MarginContainer" parent="."]
@@ -1259,9 +1258,9 @@ flip_h = true
 [node name="MarginContainer7" type="MarginContainer" parent="."]
 show_behind_parent = true
 offset_left = -103.0
-offset_top = -47.0
+offset_top = -62.0
 offset_right = 103.0
-offset_bottom = 23.0
+offset_bottom = 8.0
 
 [node name="Panel" type="Panel" parent="MarginContainer7"]
 layout_mode = 2
