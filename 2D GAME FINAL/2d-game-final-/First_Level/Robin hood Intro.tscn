@@ -1132,7 +1132,7 @@ layout_mode = 2
 text = "Awesome! There are two different types 
 of gold coins you're gonna be stealing.
 Gold and Silver. The Gold ones are worth
-5 points, and the Silver ones are worth 1. 
+5 points, and the Silver ones are worth 3. 
 They'll be scattered along the platforms.
 Check em out!"
 label_settings = SubResource("LabelSettings_g81fi")
