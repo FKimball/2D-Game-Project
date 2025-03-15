@@ -14,13 +14,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if full == true:
-		position.x -= 2.7
+		position.x -= 770*delta
 	if position.x <= -200:
 		play("become_empty")
 		full = false
 		go_back = true
 	if go_back == true:
-		position.x += 2.7
+		position.x += 770*delta
 	if position.x >= 576:
 		go_back = false
 	if game_won == true:

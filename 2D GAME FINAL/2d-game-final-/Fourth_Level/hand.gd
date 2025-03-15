@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@export var global_speed = 100
+@export var global_speed = 160
 var speed = global_speed
 
 # Called when the node enters the scene tree for the first time.
@@ -19,7 +19,7 @@ func _process(_delta: float) -> void:
 
 func _on_coin_speed_up() -> void:
 	if speed < 0:
-		speed -= 0.1
+		speed -= 18
 	elif speed > 0:
-		speed += 0.1
+		speed += 18
 	
