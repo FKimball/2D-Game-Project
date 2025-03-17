@@ -179,7 +179,7 @@ scale = Vector2(1.40659, 1.47126)
 shape = SubResource("RectangleShape2D_cyy02")
 
 [node name="Camera2D" type="Camera2D" parent="CollisionShape2D"]
-position = Vector2(0, -103)
+position = Vector2(0, -125)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(96.3873, 142.161)
