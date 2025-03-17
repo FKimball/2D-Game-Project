@@ -70,7 +70,7 @@ animations = [{
 "speed": 1.5
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_udusu"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a232q"]
 texture = ExtResource("10_q1ijg")
 0:0/0 = 0
 1:0/0 = 0
@@ -275,7 +275,7 @@ texture = ExtResource("10_q1ijg")
 
 [sub_resource type="TileSet" id="TileSet_kxswr"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_udusu")
+sources/0 = SubResource("TileSetAtlasSource_a232q")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30udr"]
 atlas = ExtResource("12_2gh3r")
@@ -533,8 +533,8 @@ scale = Vector2(1, 1.00781)
 texture = ExtResource("4_viiws")
 
 [node name="PointLight2D" type="PointLight2D" parent="Chimney"]
-position = Vector2(342.194, -206.884)
-scale = Vector2(1.97328, 0.817024)
+position = Vector2(353.5, -233.179)
+scale = Vector2(1.97924, 0.890295)
 energy = 0.6
 range_z_max = 10
 texture = ExtResource("5_44pw2")
