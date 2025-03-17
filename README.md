@@ -3,9 +3,11 @@
 By: Saif, Frankie, Mila, and Anton
 
 LATEST: Progressing on the Game\
-Anton: Updated the coin drop minigame, still uses placeholders but almost functional. Need to fix a bug with position reseting.
+Working on final touches
 
 OLD:\
-Anton: Made an outline for the last level (using rectangles and the default robot sprite). So far, the player can walk up to a workbench which will enter a "coin dropper" mini-game for them to make the gold pouches to distribute to the villagers afterwards.
+Preparing for Game Playtest\
+Progressing on the Game\
+Started working on the Game
 
 Lab #2: collaborate to create multiple scenes
