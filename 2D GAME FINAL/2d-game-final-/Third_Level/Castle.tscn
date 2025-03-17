@@ -1310,6 +1310,7 @@ position = Vector2(160, 248.362)
 scale = Vector2(3.02764, 2.17975)
 stream = ExtResource("2_1w5yg")
 volume_db = 5.943
+max_distance = 15000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1010, 102)
@@ -1350,7 +1351,7 @@ position = Vector2(1020, 42)
 scale = Vector2(0.75, 0.75)
 spawn_point = Vector2(1030, 35)
 
-[node name="Camera2D" type="Camera2D" parent="Archer"]
+[node name="Camera2D" type="Camera2D" parent="Archer" groups=["player"]]
 zoom = Vector2(1.5, 1.5)
 
 [node name="scoin1" parent="." instance=ExtResource("14_yri6u")]
