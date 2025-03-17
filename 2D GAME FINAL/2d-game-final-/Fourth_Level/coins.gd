@@ -77,6 +77,8 @@ func _process(_delta: float) -> void:
 		$"../Hand".speed = 0
 		emit_signal("winpouch")
 		visible = false
+	if Input.is_action_just_pressed("right"): #REMEMBER TO REMOVE
+		get_tree().change_scene_to_file("res://Fourth_Level/fourth_level_CONTINUED.tscn")
 
 func _on_win_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Fourth_Level/fourth_level_CONTINUED.tscn")

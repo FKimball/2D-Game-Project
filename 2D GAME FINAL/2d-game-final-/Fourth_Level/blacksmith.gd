@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 |  Thank you so much!               |
 |________________________________ |
 " + "           V"
-			interactable == false
+			interactable = false
 			$"../Icon/Reminder".visible = false
 			$"../Icon".pouches_left -= 1
 
