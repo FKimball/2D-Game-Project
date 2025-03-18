@@ -460,7 +460,7 @@ position = Vector2(45, 2)
 script = ExtResource("13_w4i7i")
 
 [node name="Timer2" type="Timer" parent="CharacterBody2D"]
-wait_time = 15.0
+wait_time = 14.0
 one_shot = true
 
 [connection signal="body_shape_entered" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_entered"]
