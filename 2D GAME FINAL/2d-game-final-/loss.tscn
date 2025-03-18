@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://big58xw5h5iem"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_iitcd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tkprr"]
+font_size = 75
+font_color = Color(0.804932, 0, 0.302549, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 655.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 135.0
+offset_right = 1155.0
+offset_bottom = 238.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_tkprr")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 1157.0
+offset_bottom = 652.0
+text = "PRESS ANYWHERE TO START OVER. 
+TRY TO COLLECT AT LEAST 30 COINS"
+script = ExtResource("1_iitcd")
