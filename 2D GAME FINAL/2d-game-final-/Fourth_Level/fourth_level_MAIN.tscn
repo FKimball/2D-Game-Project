@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=4 uid="uid://bt6m7wiuqqy3n"]
+[gd_scene load_steps=24 format=4 uid="uid://bt6m7wiuqqy3n"]
 
 [ext_resource type="PackedScene" uid="uid://bfojjnkgjrjqr" path="res://Fourth_Level/archer.tscn" id="2_dy1i0"]
+[ext_resource type="FontFile" uid="uid://bhhtouvxxseif" path="res://First_Level/arcadeclassic/ARCADECLASSIC.TTF" id="2_moebm"]
 [ext_resource type="Texture2D" uid="uid://cgvgvw4gc4qo" path="res://Fourth_Level/Assets/Workbench.webp" id="3_2ib4s"]
 [ext_resource type="Texture2D" uid="uid://djxd7s7wnnaxi" path="res://Fourth_Level/Assets/chimney.png" id="4_mybem"]
 [ext_resource type="Texture2D" uid="uid://b5hyij6pfwpm2" path="res://Fourth_Level/Assets/main_wood_bg.png" id="5_bs2xx"]
@@ -21,6 +22,7 @@ size = Vector2(39.875, 732.438)
 size = Vector2(1135, 51)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kumsh"]
+font = ExtResource("2_moebm")
 font_color = Color(4.86121e-06, 0.802246, 0.400713, 1)
 outline_size = 1
 outline_color = Color(0.0837009, 0.383142, 0.272845, 1)
@@ -28,6 +30,7 @@ shadow_size = 12
 shadow_color = Color(0, 0.243137, 0, 0.427451)
 
 [sub_resource type="LabelSettings" id="LabelSettings_fss8k"]
+font = ExtResource("2_moebm")
 font_size = 24
 font_color = Color(0.027451, 0.678431, 0.337255, 1)
 outline_size = 2

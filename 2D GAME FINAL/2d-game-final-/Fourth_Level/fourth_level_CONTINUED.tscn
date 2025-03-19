@@ -1539,6 +1539,14 @@ script = ExtResource("19_mtvjk")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pit5"]
 polygon = PackedVector2Array(-18, -16, -88, -28, -88, 116, -12, 332, 614, 330, 578, 110, 586, -28, 434, -16, 456, 136, 344, 180, 104, 180, 80, 112, 90, -28)
 
+[node name="pouches_win" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[node name="win_transition" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
 [connection signal="timeout" from="Icon/AnimatedSprite2D/Camera2D/Timer" to="Pit" method="_on_timer_timeout"]
 [connection signal="body_entered" from="blacksmith/Area2D Blacksmith" to="blacksmith" method="_on_area_2d_blacksmith_body_entered"]
 [connection signal="body_exited" from="blacksmith/Area2D Blacksmith" to="blacksmith" method="_on_area_2d_blacksmith_body_exited"]
@@ -1556,5 +1564,7 @@ polygon = PackedVector2Array(-18, -16, -88, -28, -88, 116, -12, 332, 614, 330, 5
 [connection signal="body_entered" from="Merchant/Area2D Merchant" to="Merchant" method="_on_area_2d_merchant_body_entered"]
 [connection signal="body_exited" from="Merchant/Area2D Merchant" to="Merchant" method="_on_area_2d_merchant_body_exited"]
 [connection signal="body_entered" from="Pit5" to="Pit" method="_on_pit_5_body_entered"]
+[connection signal="timeout" from="pouches_win" to="Icon" method="_on_pouches_win_timeout"]
+[connection signal="timeout" from="win_transition" to="Icon" method="_on_win_transition_timeout"]
 
 [editable path="Icon"]

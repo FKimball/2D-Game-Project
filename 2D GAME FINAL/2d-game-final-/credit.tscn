@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://hbknopcihqny"]
+
+[ext_resource type="Script" path="res://credits.gd" id="1_2jjgt"]
+[ext_resource type="Texture2D" uid="uid://bf310g44avhnm" path="res://First_Level/il_fullxfull.5021761641_r78a.jpg.webp" id="1_do1pc"]
+[ext_resource type="FontFile" uid="uid://bhhtouvxxseif" path="res://First_Level/arcadeclassic/ARCADECLASSIC.TTF" id="3_rmmle"]
+[ext_resource type="AudioStream" uid="uid://dqclr3ocambbt" path="res://Fourth_Level/Assets/BiS credits cut.mp3" id="4_oeny5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7byf8"]
+line_spacing = 50.0
+font = ExtResource("3_rmmle")
+font_size = 50
+font_color = Color(0.866507, 0.651628, 0.437193, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2jjgt")
+
+[node name="IlFullxfull_5021761641R78a_jpg" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(566.5, 319.5)
+scale = Vector2(0.802885, 0.915441)
+texture = ExtResource("1_do1pc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 162.0
+offset_top = 220.0
+offset_right = 1020.0
+offset_bottom = 1935.0
+text = "            CONGRATULATIONS ON  BEATING
+                                      HOOD'S  HEIST
+
+
+
+
+
+                                               CREDITS
+
+MAIN  MENU/LEVEL 1                               SAIF  KHAN
+
+LEVEL 2                                                                  MILA  PEREZ
+
+LEVEL 3                                             FRANKIE  KIMBALL
+
+LEVEL 4                                                     ANTON  MAIRONI
+
+ASSETS           ITCH.io/Google/Self-made
+
+        SPECIAL  THANKS  TO  PROF.  Bezark
+
+
+Hood's  HEIST © 2025 
+ALL RIGHTS RESERVED"
+label_settings = SubResource("LabelSettings_7byf8")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_oeny5")
+
+[connection signal="draw" from="." to="." method="_on_draw"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

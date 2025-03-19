@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://vs2sphh323q0"]
+[gd_scene load_steps=32 format=4 uid="uid://vs2sphh323q0"]
 
 [ext_resource type="Texture2D" uid="uid://c4egx540hl1qx" path="res://Third_Level/Assets/Terrain/Terrain (16x16).png" id="1_2re5d"]
 [ext_resource type="Texture2D" uid="uid://c58kjdpslxjlu" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/Version C/layers/sky.png" id="1_5142h"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cd5ehbfim37l2" path="res://coin-pickup-98269.mp3" id="2_1w5yg"]
 [ext_resource type="Texture2D" uid="uid://binb2wpfjlx5l" path="res://Third_Level/Assets/Outdoors_Tileset/midground_/autumn_.png" id="2_4vfig"]
 [ext_resource type="Texture2D" uid="uid://p3damftjidc3" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/Version C/layers/far-mountains.png" id="2_d0tj2"]
+[ext_resource type="FontFile" uid="uid://bhhtouvxxseif" path="res://First_Level/arcadeclassic/ARCADECLASSIC.TTF" id="2_jssjw"]
 [ext_resource type="PackedScene" uid="uid://bktp6xtyg3a0q" path="res://Archer.tscn" id="2_kaowm"]
 [ext_resource type="Texture2D" uid="uid://bxy5d0jwd3b02" path="res://Third_Level/Assets/Outdoors_Tileset/midground_/dungeon_.png" id="3_rygxq"]
 [ext_resource type="PackedScene" uid="uid://cjuu017ka8shi" path="res://coin.tscn" id="3_y750j"]
@@ -22,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bt6m7wiuqqy3n" path="res://Fourth_Level/fourth_level_MAIN.tscn" id="20_qiivs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sh3yf"]
+font = ExtResource("2_jssjw")
 font_size = 12
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpalo"]

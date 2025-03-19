@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bbx8plk0ad8aa"]
+[gd_scene load_steps=17 format=4 uid="uid://bbx8plk0ad8aa"]
 
 [ext_resource type="Script" path="res://Second_Level/background.gd" id="1_7phyq"]
 [ext_resource type="Texture2D" uid="uid://cku0ih7qgv8ql" path="res://Second_Level/castle_tileset.png" id="1_w2xxk"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cjuu017ka8shi" path="res://coin.tscn" id="3_n0o3b"]
 [ext_resource type="Script" path="res://Second_Level/label.gd" id="4_s0rpj"]
 [ext_resource type="PackedScene" uid="uid://b6yujd36pamin" path="res://Knight.tscn" id="5_kik1k"]
+[ext_resource type="FontFile" uid="uid://bhhtouvxxseif" path="res://First_Level/arcadeclassic/ARCADECLASSIC.TTF" id="5_pi5rt"]
 [ext_resource type="Script" path="res://Third_Level/node_2d.gd" id="7_psr63"]
 [ext_resource type="PackedScene" uid="uid://vs2sphh323q0" path="res://Third_Level/Castle.tscn" id="8_s6os5"]
 [ext_resource type="PackedScene" uid="uid://yvif84fa7g7k" path="res://scoin.tscn" id="9_8ji7k"]
@@ -417,6 +418,9 @@ sources/0 = SubResource("TileSetAtlasSource_8ko02")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mmpo"]
 size = Vector2(1152, 9)
 
+[sub_resource type="LabelSettings" id="LabelSettings_kkdn4"]
+font = ExtResource("5_pi5rt")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qsuv"]
 size = Vector2(66.5, 42.5)
 
@@ -488,6 +492,7 @@ offset_top = 1.0
 offset_right = 72.0
 offset_bottom = 24.0
 text = "Coins:"
+label_settings = SubResource("LabelSettings_kkdn4")
 script = ExtResource("4_s0rpj")
 
 [node name="Coin2" parent="." instance=ExtResource("3_n0o3b")]
