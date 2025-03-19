@@ -1146,7 +1146,7 @@ of  coins you're gonna be stealing.
 Gold and Silver. The gold ones are worth
 5 points, and the silver ones are worth 3. 
 They'll be scattered along the platforms.
-Check 'gem out!"
+Check 'em out!"
 label_settings = SubResource("LabelSettings_g81fi")
 
 [node name="MarginContainer4" type="MarginContainer" parent="."]
@@ -1236,10 +1236,10 @@ color = Color(0.172549, 0.145098, 0.27451, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 z_index = -1
-offset_left = 2353.0
+offset_left = 1507.0
 offset_top = 85.0
-offset_right = 3458.0
-offset_bottom = 561.0
+offset_right = 3794.0
+offset_bottom = 791.0
 color = Color(0.172549, 0.145098, 0.27451, 1)
 
 [node name="Killbox" type="Area2D" parent="."]

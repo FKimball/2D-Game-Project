@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bbx8plk0ad8aa"]
+[gd_scene load_steps=20 format=4 uid="uid://bbx8plk0ad8aa"]
 
 [ext_resource type="Script" path="res://Second_Level/background.gd" id="1_7phyq"]
 [ext_resource type="Texture2D" uid="uid://cku0ih7qgv8ql" path="res://Second_Level/castle_tileset.png" id="1_w2xxk"]
@@ -419,6 +419,12 @@ sources/0 = SubResource("TileSetAtlasSource_8ko02")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mmpo"]
 size = Vector2(1152, 9)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htrmt"]
+size = Vector2(51, 642)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cf7p"]
+size = Vector2(62, 714)
+
 [sub_resource type="LabelSettings" id="LabelSettings_kkdn4"]
 font = ExtResource("5_pi5rt")
 
@@ -449,6 +455,14 @@ offset_top = 640.0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-31, 338)
+shape = SubResource("RectangleShape2D_htrmt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1181.5, 299)
+shape = SubResource("RectangleShape2D_0cf7p")
 
 [node name="Knight1" parent="." groups=["enemy"] instance=ExtResource("5_kik1k")]
 position = Vector2(622, 619)
