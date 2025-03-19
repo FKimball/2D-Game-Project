@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=4 uid="uid://bkfrej1s2a46g"]
+[gd_scene load_steps=66 format=4 uid="uid://bkfrej1s2a46g"]
 
 [ext_resource type="Texture2D" uid="uid://wafaco7dedxa" path="res://First_Level/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/spring_.png" id="2_d8anv"]
 [ext_resource type="Texture2D" uid="uid://cwye8xg3wpejv" path="res://First_Level/tileset.png" id="2_leas5"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b87mewky2saae" path="res://First_Level/coins copy.png" id="21_4b5cl"]
 [ext_resource type="Script" path="res://First_Level/next_level.gd" id="21_6nliu"]
 [ext_resource type="PackedScene" uid="uid://bbx8plk0ad8aa" path="res://Second_Level/background.tscn" id="22_qlc55"]
+[ext_resource type="AudioStream" uid="uid://cvo051mk7lsuu" path="res://Fourth_Level/Assets/kirby forest.mp3" id="23_1tjbl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rynn5"]
 texture = ExtResource("2_d8anv")
@@ -1319,5 +1320,10 @@ offset_top = -147.0
 offset_right = 4654.0
 offset_bottom = 56.0
 color = Color(0.321569, 0.286275, 0.231373, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_1tjbl")
+volume_db = -7.0
+autoplay = true
 
 [connection signal="body_entered" from="NextLevel/NextLevel" to="NextLevel" method="_on_next_level_body_entered"]

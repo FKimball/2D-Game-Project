@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if in_miner == true && interactable == true:
 		if Input.is_action_just_pressed("ui_up"):
+			$"../gold_given".play()
 			play("happy")
 			$"../miner_text".text = "___________________________________
 |  Really? Thanks, this is more |

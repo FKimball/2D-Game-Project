@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://vs2sphh323q0"]
+[gd_scene load_steps=33 format=4 uid="uid://vs2sphh323q0"]
 
 [ext_resource type="Texture2D" uid="uid://c4egx540hl1qx" path="res://Third_Level/Assets/Terrain/Terrain (16x16).png" id="1_2re5d"]
 [ext_resource type="Texture2D" uid="uid://c58kjdpslxjlu" path="res://Third_Level/Assets/Super Mountain Dusk Files/Assets/Version C/layers/sky.png" id="1_5142h"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" path="res://scoin.gd" id="15_2yn8i"]
 [ext_resource type="Script" path="res://Third_Level/node_2d.gd" id="19_im4fg"]
 [ext_resource type="PackedScene" uid="uid://bt6m7wiuqqy3n" path="res://Fourth_Level/fourth_level_MAIN.tscn" id="20_qiivs"]
+[ext_resource type="AudioStream" uid="uid://dhdst0ngcsj27" path="res://Fourth_Level/Assets/Evoland OST - Battle Theme.mp3" id="22_jumjv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sh3yf"]
 font = ExtResource("2_jssjw")
@@ -1512,5 +1513,10 @@ shape = SubResource("RectangleShape2D_c2l2p")
 [node name="collected" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_1w5yg")
 volume_db = -80.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_jumjv")
+volume_db = -25.0
+autoplay = true
 
 [connection signal="body_entered" from="Next Level/Area2D" to="Next Level" method="_on_area_2d_body_entered"]

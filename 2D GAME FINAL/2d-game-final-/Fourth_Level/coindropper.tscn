@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://bv7w3gyut4iqi"]
+[gd_scene load_steps=23 format=3 uid="uid://bv7w3gyut4iqi"]
 
 [ext_resource type="Texture2D" uid="uid://die4xb73hlnw7" path="res://Fourth_Level/Assets/Hand.png" id="1_bgbwd"]
 [ext_resource type="FontFile" uid="uid://bhhtouvxxseif" path="res://First_Level/arcadeclassic/ARCADECLASSIC.TTF" id="1_cy1vt"]
 [ext_resource type="Script" path="res://Fourth_Level/hand.gd" id="1_j8bdt"]
+[ext_resource type="AudioStream" uid="uid://bxgpvot4t10g6" path="res://Fourth_Level/Assets/Contemplation - Mario Party DS.mp3" id="1_kocnl"]
 [ext_resource type="Script" path="res://Fourth_Level/coins.gd" id="2_aleti"]
 [ext_resource type="Texture2D" uid="uid://dbi7te5ydan8i" path="res://Fourth_Level/Assets/coins.png" id="3_ad6ry"]
 [ext_resource type="Script" path="res://Fourth_Level/timer.gd" id="4_o1da5"]
@@ -63,6 +64,11 @@ font_color = Color(0.0823529, 0.490196, 0.411765, 1)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(1, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_kocnl")
+volume_db = -10.0
+autoplay = true
 
 [node name="Area2D Nothing" type="Area2D" parent="."]
 position = Vector2(2, 646)

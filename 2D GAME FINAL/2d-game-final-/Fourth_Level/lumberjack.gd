@@ -11,6 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if in_lumberjack == true && interactable == true:
+		$"../gold_given".play()
 		if Input.is_action_just_pressed("ui_up"):
 			play("happy")
 			$"../lumberjack_text".text = "_______________________________________

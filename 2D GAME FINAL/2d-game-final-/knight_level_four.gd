@@ -16,13 +16,15 @@ func _ready():
 		$"../Hint".queue_free()
 		$Timer.start()
 		$Timer2.start()
-
+		$AudioStreamPlayer.play()
 func _physics_process(delta: float) -> void:
 	if play_cinematic == true:
 		$Camera2D.make_current()
+		
 		animated_sprite.play("run")
 		position.x -= move
 		move_and_slide()
+		
 
 		if position.x <= 1130:
 			move = 0

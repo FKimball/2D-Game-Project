@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if in_gatherer == true && interactable == true:
 		if Input.is_action_just_pressed("ui_up"):
+			$"../gold_given".play()
 			play("happy")
 			$"../gatherer_text".text = "_______________________________________
 |  I can buy a whole forest with     |

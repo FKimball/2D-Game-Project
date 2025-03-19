@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bbx8plk0ad8aa"]
+[gd_scene load_steps=18 format=4 uid="uid://bbx8plk0ad8aa"]
 
 [ext_resource type="Script" path="res://Second_Level/background.gd" id="1_7phyq"]
 [ext_resource type="Texture2D" uid="uid://cku0ih7qgv8ql" path="res://Second_Level/castle_tileset.png" id="1_w2xxk"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://vs2sphh323q0" path="res://Third_Level/Castle.tscn" id="8_s6os5"]
 [ext_resource type="PackedScene" uid="uid://yvif84fa7g7k" path="res://scoin.tscn" id="9_8ji7k"]
 [ext_resource type="AudioStream" uid="uid://cd5ehbfim37l2" path="res://coin-pickup-98269.mp3" id="10_tn0jo"]
+[ext_resource type="AudioStream" uid="uid://b6vsm5w3tku50" path="res://Fourth_Level/Assets/megaman castle.mp3" id="12_4rfjc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ko02"]
 texture = ExtResource("1_w2xxk")
@@ -534,5 +535,10 @@ position = Vector2(278, 220)
 
 [node name="collected" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_tn0jo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_4rfjc")
+volume_db = -20.0
+autoplay = true
 
 [connection signal="body_entered" from="Next Level/Area2D" to="Next Level" method="_on_area_2d_body_entered"]

@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -400.0
 
 var in_workbench = false
 var is_jumping = false
-var pouches_left = 1
+var pouches_left = 5
 var start_timer = true
 var update_pouch_text = true
 var slowmo = 0.6
@@ -110,8 +110,8 @@ func _on_pouches_win_timeout() -> void:
 	
 func start_slow_motion(scale: float = slowmo) -> void: #SOURCE: https://forum.godotengine.org/t/create-a-slow-motion-effect-with-only-a-few-lines-of-code/36098
 		Engine.time_scale = scale
-		AudioServer.playback_speed_scale = scale
 		
 
 func _on_win_transition_timeout() -> void:
+	start_slow_motion(1)
 	get_tree().change_scene_to_file("res://credit.tscn")

@@ -6,17 +6,20 @@ var roll = false
 func _ready() -> void:
 	$AudioStreamPlayer.play()
 	$Timer.start() # Replace with function body.
-
+	$Timer2.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if roll == true:
-		$Label.position.y -= 0.4
-		print($Label.position.y)
-	if $Label.position.y <= -2052:
-		get_tree().paused = true
+		$Label.position.y -= 0.32
+	if $Label.position.y <= -2582:
+		roll = false
 	
 
 
 func _on_timer_timeout() -> void:
 	roll = true # Replace with function body.
+
+
+func _on_timer_2_timeout() -> void:
+		get_tree().quit()

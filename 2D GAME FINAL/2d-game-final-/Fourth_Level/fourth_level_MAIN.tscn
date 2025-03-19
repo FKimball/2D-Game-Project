@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bt6m7wiuqqy3n"]
+[gd_scene load_steps=25 format=4 uid="uid://bt6m7wiuqqy3n"]
 
 [ext_resource type="PackedScene" uid="uid://bfojjnkgjrjqr" path="res://Fourth_Level/archer.tscn" id="2_dy1i0"]
 [ext_resource type="FontFile" uid="uid://bhhtouvxxseif" path="res://First_Level/arcadeclassic/ARCADECLASSIC.TTF" id="2_moebm"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b6yujd36pamin" path="res://Knight.tscn" id="11_yuw62"]
 [ext_resource type="Script" path="res://knight_level_four.gd" id="12_lvnr5"]
 [ext_resource type="Script" path="res://knight_follower.gd" id="13_w4i7i"]
+[ext_resource type="AudioStream" uid="uid://cpfey7csoctkk" path="res://Fourth_Level/Assets/SpongeBob - The Mob.mp3" id="15_1uikf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7r5m"]
 size = Vector2(39.875, 732.438)
@@ -463,8 +464,12 @@ position = Vector2(45, 2)
 script = ExtResource("13_w4i7i")
 
 [node name="Timer2" type="Timer" parent="CharacterBody2D"]
-wait_time = 14.0
+wait_time = 16.0
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("15_1uikf")
+volume_db = -15.0
 
 [connection signal="body_shape_entered" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_entered"]
 [connection signal="body_shape_exited" from="Workbench/Area2D" to="Icon" method="_on_area_2d_body_shape_exited"]

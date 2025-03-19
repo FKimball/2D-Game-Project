@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if in_blacksmith == true && interactable == true:
 		if Input.is_action_just_pressed("ui_up"):
+			$"../gold_given".play()
 			play("happy")
 			$"../blacksmith_text".text = "___________________________________
 |  25 gold coins just for me!?    |

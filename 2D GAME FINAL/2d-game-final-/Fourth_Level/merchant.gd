@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if in_merchant == true && interactable == true:
 		if Input.is_action_just_pressed("ui_up"):
+			$"../gold_given".play()
 			play("happy")
 			$"../merchant_text".text = "__________________________________________
 |  Hoho! But it's fine with generous  |

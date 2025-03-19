@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhdst0ngcsj27"
+path="res://.godot/imported/Evoland OST - Battle Theme.mp3-d82d5596e11b5c3158ebdb754b294f2e.mp3str"
+
+[deps]
+
+source_file="res://Fourth_Level/Assets/Evoland OST - Battle Theme.mp3"
+dest_files=["res://.godot/imported/Evoland OST - Battle Theme.mp3-d82d5596e11b5c3158ebdb754b294f2e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
