@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bbx8plk0ad8aa"]
+[gd_scene load_steps=14 format=4 uid="uid://bbx8plk0ad8aa"]
 
 [ext_resource type="Script" path="res://Second_Level/background.gd" id="1_7phyq"]
 [ext_resource type="Texture2D" uid="uid://cku0ih7qgv8ql" path="res://Second_Level/castle_tileset.png" id="1_w2xxk"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b6yujd36pamin" path="res://Knight.tscn" id="5_kik1k"]
 [ext_resource type="Script" path="res://Third_Level/node_2d.gd" id="7_psr63"]
 [ext_resource type="PackedScene" uid="uid://vs2sphh323q0" path="res://Third_Level/Castle.tscn" id="8_s6os5"]
+[ext_resource type="PackedScene" uid="uid://yvif84fa7g7k" path="res://scoin.tscn" id="9_8ji7k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ko02"]
 texture = ExtResource("1_w2xxk")
@@ -443,9 +444,6 @@ offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
-[node name="Node2D2" parent="." instance=ExtResource("3_n0o3b")]
-position = Vector2(318, 430)
-
 [node name="Knight1" parent="." groups=["enemy"] instance=ExtResource("5_kik1k")]
 position = Vector2(622, 619)
 scale = Vector2(1.15, 1.15)
@@ -492,28 +490,20 @@ text = "Coins:"
 script = ExtResource("4_s0rpj")
 
 [node name="Coin2" parent="." instance=ExtResource("3_n0o3b")]
-position = Vector2(512, 378)
+position = Vector2(1137, 526)
+autoplay = "spin"
 
 [node name="Coin" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(687, 465)
-
-[node name="Node2D4" parent="." instance=ExtResource("3_n0o3b")]
-position = Vector2(880, 221)
+autoplay = "spin"
 
 [node name="Node2D3" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(1058, 317)
-
-[node name="Coin3" parent="." instance=ExtResource("3_n0o3b")]
-position = Vector2(896, 401)
-
-[node name="Node2D5" parent="." instance=ExtResource("3_n0o3b")]
-position = Vector2(701, 157)
+autoplay = "spin"
 
 [node name="Node2D6" parent="." instance=ExtResource("3_n0o3b")]
 position = Vector2(478, 127)
-
-[node name="Node2D7" parent="." instance=ExtResource("3_n0o3b")]
-position = Vector2(274, 223)
+autoplay = "spin"
 
 [node name="Next Level" type="Node2D" parent="."]
 position = Vector2(27.6315, 32.4504)
@@ -526,5 +516,14 @@ position = Vector2(3.36841, 55.5495)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Next Level/Area2D"]
 position = Vector2(6.10352e-05, -48)
 shape = SubResource("RectangleShape2D_7qsuv")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("9_8ji7k")]
+position = Vector2(320, 430)
+
+[node name="AnimatedSprite2D2" parent="." instance=ExtResource("9_8ji7k")]
+position = Vector2(703, 157)
+
+[node name="AnimatedSprite2D3" parent="." instance=ExtResource("9_8ji7k")]
+position = Vector2(278, 220)
 
 [connection signal="body_entered" from="Next Level/Area2D" to="Next Level" method="_on_area_2d_body_entered"]
