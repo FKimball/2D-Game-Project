@@ -552,7 +552,7 @@ stream = ExtResource("10_tn0jo")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_4rfjc")
-volume_db = -20.0
+volume_db = -25.0
 autoplay = true
 
 [connection signal="body_entered" from="Next Level/Area2D" to="Next Level" method="_on_area_2d_body_entered"]

@@ -463,7 +463,7 @@ position = Vector2(45, 2)
 script = ExtResource("13_w4i7i")
 
 [node name="Timer2" type="Timer" parent="CharacterBody2D"]
-wait_time = 16.0
+wait_time = 13.0
 one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CharacterBody2D"]

@@ -46,6 +46,9 @@ func _process(_delta: float) -> void:
 	elif position.x <= 244:
 		speed = speed*-1
 	
+	if $"../AudioStreamPlayer".playing == false:
+		$"../AudioStreamPlayer".play()
+		
 	if score > 0:
 		if (Input.is_action_just_pressed("DropCoin") && is_dropping == false):
 			score -= 1

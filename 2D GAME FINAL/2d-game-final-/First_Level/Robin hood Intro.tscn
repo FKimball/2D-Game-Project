@@ -1323,7 +1323,7 @@ color = Color(0.321569, 0.286275, 0.231373, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_1tjbl")
-volume_db = -7.0
+volume_db = -10.0
 autoplay = true
 
 [connection signal="body_entered" from="NextLevel/NextLevel" to="NextLevel" method="_on_next_level_body_entered"]

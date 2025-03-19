@@ -8,7 +8,7 @@ const JUMP_VELOCITY = -400.0
 var play_cinematic = false
 var move = 1
 func _ready():
-	if Globals.coins >= 25:
+	if Globals.coins >= 30:
 		queue_free()
 	else:
 		animated_sprite.flip_h = true
