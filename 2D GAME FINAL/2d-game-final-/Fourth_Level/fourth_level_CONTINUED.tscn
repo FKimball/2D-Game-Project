@@ -1518,7 +1518,6 @@ script = ExtResource("23_j6tyd")
 
 [node name="CollisionShape2D Merchant" type="CollisionShape2D" parent="Merchant/Area2D Merchant"]
 position = Vector2(5.80017, 5.59999)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_i028e")
 
 [node name="merchant_text" type="Label" parent="."]

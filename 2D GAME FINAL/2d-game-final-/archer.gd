@@ -11,7 +11,7 @@ const JUMP_VELOCITY = -500.0
 
 func _ready():
 	global_position = spawn_point
-	print("Hello")
+	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

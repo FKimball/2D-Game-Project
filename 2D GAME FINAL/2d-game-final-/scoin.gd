@@ -8,4 +8,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if level:
 			level.add_point(coin_value)
 			$collect.play()
+			$"../collected".play()
 			queue_free()
