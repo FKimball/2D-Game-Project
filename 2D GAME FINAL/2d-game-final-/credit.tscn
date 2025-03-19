@@ -43,18 +43,20 @@ LEVEL 2                                                                  MILA  P
 
 LEVEL 3                                             FRANKIE  KIMBALL
 
-LEVEL 4                                                     ANTON  MAIRONI
+LEVEL 4/minigame                 ANTON  MAIRONI
 
 ASSETS             ITCH/Internet/Self-made
 MUSIC FROM (in order)    KIRBY AIR RIDE
                                                                                                MEGAMAN II
                                                                                                    EVOLAND 1
                                                SPONGEBOB SQUAREPANTS
+                                                                                Mario Party  DS
                                                                     DRAGON QUEST VIII
                                                                    Mario & Luigi: BIS
         SPECIAL  THANKS  TO  PROF.  Bezark
 
                        THANK  YOU  FOR  PLAYING
+
 
 Hood  HEISTERS © 2025 
 ALL RIGHTS RESERVED"
@@ -67,7 +69,7 @@ wait_time = 3.0
 stream = ExtResource("4_q8ntt")
 
 [node name="Timer2" type="Timer" parent="."]
-wait_time = 45.0
+wait_time = 46.0
 
 [connection signal="draw" from="." to="." method="_on_draw"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

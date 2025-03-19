@@ -12,7 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if roll == true:
 		$Label.position.y -= 0.32
-	if $Label.position.y <= -2582:
+	if $Label.position.y <= -2692:
 		roll = false
 	
 

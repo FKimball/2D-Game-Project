@@ -23,7 +23,6 @@ size = Vector2(39.875, 732.438)
 size = Vector2(1135, 51)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kumsh"]
-font = ExtResource("2_moebm")
 font_color = Color(4.86121e-06, 0.802246, 0.400713, 1)
 outline_size = 1
 outline_color = Color(0.0837009, 0.383142, 0.272845, 1)
