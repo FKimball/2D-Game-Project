@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 			$"../miner_text".text = "___________________________________
 |  Really? Thanks, this is more |
 |  than I mine in a week!           |
-|________________________________ |
+|_________________________________|
 " + "          V"
 			interactable = false
 			$"../Icon".pouches_left -= 1

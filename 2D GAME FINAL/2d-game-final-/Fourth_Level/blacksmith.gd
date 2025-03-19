@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 			$"../blacksmith_text".text = "___________________________________
 |  25 gold coins just for me!?    |
 |  Thank you so much!               |
-|________________________________ |
+|_________________________________|
 " + "           V"
 			interactable = false
 			$"../Icon/Reminder".visible = false

@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 			$"../lumberjack_text".text = "_______________________________________
 |  No way! Please, take all of my    |
 |  stock, come back anytime!          |
-|____________________________________ |
+|_____________________________________|
 " + "          V"
 			interactable = false
 			$"../Icon".pouches_left -= 1

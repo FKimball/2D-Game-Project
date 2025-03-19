@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 			$"../gatherer_text".text = "_______________________________________
 |  I can buy a whole forest with     |
 |  that, thank you so much!            |
-|____________________________________ |
+|____________________________________|
 " + "          V"
 			interactable = false
 			$"../Icon".pouches_left -= 1
