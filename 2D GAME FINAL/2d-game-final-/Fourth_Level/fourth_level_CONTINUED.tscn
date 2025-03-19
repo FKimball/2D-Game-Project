@@ -1430,6 +1430,7 @@ color = Color(0.172549, 0.145098, 0.27451, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="ColorRect3"]
 z_index = -2
+layout_mode = 0
 offset_left = -660.0
 offset_top = -1162.0
 offset_right = 2072.0
@@ -1455,7 +1456,7 @@ scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_8e7q2")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.745115
+frame_progress = 0.55634
 script = ExtResource("21_y8m0n")
 
 [node name="Area2D Gathered" type="Area2D" parent="Gatherer"]
@@ -1510,7 +1511,7 @@ scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_n7dex")
 animation = &"happy"
 autoplay = "idle"
-frame_progress = 0.800123
+frame_progress = 0.611347
 script = ExtResource("23_j6tyd")
 
 [node name="Area2D Merchant" type="Area2D" parent="Merchant"]
