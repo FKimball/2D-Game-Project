@@ -28,3 +28,8 @@ func _on_pit_2_body_entered(body: Node2D) -> void:
 func _on_pit_3_body_entered(body: Node2D) -> void:
 	$"../Icon".position.x = 770
 	$"../Icon".position.y = 275
+
+
+func _on_pit_4_body_entered(body: Node2D) -> void:
+	$"../Icon".position.x = 770
+	$"../Icon".position.y = 275 
