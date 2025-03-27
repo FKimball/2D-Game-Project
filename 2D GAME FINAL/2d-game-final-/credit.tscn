@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://hbknopcihqny"]
+
+[ext_resource type="Script" path="res://credits.gd" id="1_2jjgt"]
+[ext_resource type="Texture2D" uid="uid://bf310g44avhnm" path="res://First_Level/il_fullxfull.5021761641_r78a.jpg.webp" id="1_do1pc"]
+[ext_resource type="FontFile" uid="uid://bhhtouvxxseif" path="res://First_Level/arcadeclassic/ARCADECLASSIC.TTF" id="3_rmmle"]
+[ext_resource type="AudioStream" uid="uid://dqclr3ocambbt" path="res://Fourth_Level/Assets/BiS Credits cut.mp3" id="4_q8ntt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7byf8"]
+line_spacing = 50.0
+font = ExtResource("3_rmmle")
+font_size = 50
+font_color = Color(0.866507, 0.651628, 0.437193, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2jjgt")
+
+[node name="IlFullxfull_5021761641R78a_jpg" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(566.5, 319.5)
+scale = Vector2(0.802885, 0.915441)
+texture = ExtResource("1_do1pc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 162.0
+offset_top = 220.0
+offset_right = 1020.0
+offset_bottom = 1935.0
+text = "            CONGRATULATIONS ON  BEATING
+                                         HOOD'S  HEIST
+
+
+
+
+
+                                                  CREDITS
+
+MAIN  MENU/LEVEL 1                               SAIF  KHAN
+
+LEVEL 2                                                                  MILA  PEREZ
+
+LEVEL 3                                             FRANKIE  KIMBALL
+
+LEVEL 4/minigame                 ANTON  MAIRONI
+
+ASSETS             ITCH/Internet/Self-made
+MUSIC FROM (in order)    KIRBY AIR RIDE
+                                                                                               MEGAMAN II
+                                                                                                   EVOLAND 1
+                                               SPONGEBOB SQUAREPANTS
+                                                                                Mario Party  DS
+                                                                    DRAGON QUEST VIII
+                                                                   Mario & Luigi: BIS
+        SPECIAL  THANKS  TO  PROF.  Bezark
+
+                       THANK  YOU  FOR  PLAYING
+
+
+Hood  HEISTERS © 2025 
+ALL RIGHTS RESERVED"
+label_settings = SubResource("LabelSettings_7byf8")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_q8ntt")
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 45.2
+
+[connection signal="draw" from="." to="." method="_on_draw"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

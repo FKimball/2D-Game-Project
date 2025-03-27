@@ -1,0 +1,118 @@
+[gd_scene load_steps=15 format=3 uid="uid://big58xw5h5iem"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_iitcd"]
+[ext_resource type="Texture2D" uid="uid://8k275yh3xi0w" path="res://Fourth_Level/Assets/Archer/death.png" id="2_1e0xs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tkprr"]
+font_size = 75
+font_color = Color(0.804932, 0, 0.302549, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whoaf"]
+atlas = ExtResource("2_1e0xs")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b27nh"]
+atlas = ExtResource("2_1e0xs")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g83qg"]
+atlas = ExtResource("2_1e0xs")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu4tt"]
+atlas = ExtResource("2_1e0xs")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56ayn"]
+atlas = ExtResource("2_1e0xs")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_615x1"]
+atlas = ExtResource("2_1e0xs")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpdfb"]
+atlas = ExtResource("2_1e0xs")
+region = Rect2(384, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5uti"]
+atlas = ExtResource("2_1e0xs")
+region = Rect2(448, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1na8"]
+atlas = ExtResource("2_1e0xs")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bby10"]
+atlas = ExtResource("2_1e0xs")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eafmi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whoaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b27nh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g83qg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu4tt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56ayn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_615x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpdfb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5uti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1na8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bby10")
+}],
+"loop": false,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 655.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 135.0
+offset_right = 1155.0
+offset_bottom = 238.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_tkprr")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 1157.0
+offset_bottom = 652.0
+text = "PRESS ANYWHERE TO START OVER. 
+TRY TO COLLECT AT LEAST 30 COINS"
+script = ExtResource("1_iitcd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(580, 438)
+scale = Vector2(2.07813, 2.09375)
+sprite_frames = SubResource("SpriteFrames_eafmi")
+autoplay = "default"

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dhpmqbh4fa85i" path="res://Third_Level/Assets/FreeKnight_v1/_Idle.png" id="1_8d6ps"]
 [ext_resource type="Script" path="res://knight.gd" id="2_6fmma"]
 [ext_resource type="Texture2D" uid="uid://jnjnk37llavn" path="res://Third_Level/Assets/FreeKnight_v1/_Run.png" id="2_jtav1"]
-[ext_resource type="AudioStream" uid="uid://dbeq4rgpy1obp" path="res://Third_Level/Assets/mixkit-impact-of-a-strong-punch-2155.mp3" id="4_sk7r4"]
+[ext_resource type="AudioStream" uid="uid://3kppwhfwwl22" path="res://mixkit-impact-of-a-strong-punch-2155.mp3" id="4_sk7r4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vfd5g"]
 atlas = ExtResource("1_8d6ps")

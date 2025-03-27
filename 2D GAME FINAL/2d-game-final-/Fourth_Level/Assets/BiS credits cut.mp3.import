@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqclr3ocambbt"
+path="res://.godot/imported/BiS Credits cut.mp3-b3bdb37a35664bc3e48af55bbb61ea14.mp3str"
+
+[deps]
+
+source_file="res://Fourth_Level/Assets/BiS Credits cut.mp3"
+dest_files=["res://.godot/imported/BiS Credits cut.mp3-b3bdb37a35664bc3e48af55bbb61ea14.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

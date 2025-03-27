@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpfey7csoctkk"
+path="res://.godot/imported/SpongeBob - The Mob.mp3-c97d4b514c87a231c182b4e94152331c.mp3str"
+
+[deps]
+
+source_file="res://Fourth_Level/Assets/SpongeBob - The Mob.mp3"
+dest_files=["res://.godot/imported/SpongeBob - The Mob.mp3-c97d4b514c87a231c182b4e94152331c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

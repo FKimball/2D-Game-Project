@@ -46,6 +46,9 @@ func _process(_delta: float) -> void:
 	elif position.x <= 244:
 		speed = speed*-1
 	
+	if $"../AudioStreamPlayer".playing == false:
+		$"../AudioStreamPlayer".play()
+		
 	if score > 0:
 		if (Input.is_action_just_pressed("DropCoin") && is_dropping == false):
 			score -= 1
@@ -77,6 +80,8 @@ func _process(_delta: float) -> void:
 		$"../Hand".speed = 0
 		emit_signal("winpouch")
 		visible = false
+	if Input.is_action_just_pressed("Bypass"): #BYPASS MINIGAME
+		get_tree().change_scene_to_file("res://Fourth_Level/fourth_level_CONTINUED.tscn")
 
 func _on_win_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Fourth_Level/fourth_level_CONTINUED.tscn")

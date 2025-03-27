@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxgpvot4t10g6"
+path="res://.godot/imported/Contemplation - Mario Party DS.mp3-b0d95152b63476af5774442ffb26d6ec.mp3str"
+
+[deps]
+
+source_file="res://Fourth_Level/Assets/Contemplation - Mario Party DS.mp3"
+dest_files=["res://.godot/imported/Contemplation - Mario Party DS.mp3-b0d95152b63476af5774442ffb26d6ec.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
